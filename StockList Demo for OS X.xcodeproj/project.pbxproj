@@ -1,0 +1,383 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2FC72A177835B3009F4C03 /* Cocoa.framework */; };
+		8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC733177835B3009F4C03 /* InfoPlist.strings */; };
+		8C2FC737177835B3009F4C03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC736177835B3009F4C03 /* main.m */; };
+		8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC739177835B3009F4C03 /* Credits.rtf */; };
+		8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC73D177835B3009F4C03 /* AppDelegate.m */; };
+		8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC73F177835B3009F4C03 /* MainMenu.xib */; };
+		8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8C829E84177B48E300F1D0A5 /* App-icon.icns */; };
+		8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */; };
+		8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */; };
+		8CC42B35177B3350005EF21F /* S-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B34177B3350005EF21F /* S-logo.png */; };
+		8CDBD49C17798F5700EC914A /* libLightstreamer_OSX_client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */; };
+		8CDBD4A4177995DA00EC914A /* StockListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDBD4A3177995DA00EC914A /* StockListWindowController.m */; };
+		8CDBD4A717799BDE00EC914A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */; };
+		8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AA1779A78300EC914A /* StockListWindow.xib */; };
+		8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */; };
+		8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockList Demo for OS X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2FC72A177835B3009F4C03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8C2FC72D177835B3009F4C03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8C2FC72E177835B3009F4C03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8C2FC72F177835B3009F4C03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C2FC732177835B3009F4C03 /* StockList Demo for OS X-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockList Demo for OS X-Info.plist"; sourceTree = "<group>"; };
+		8C2FC734177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C2FC736177835B3009F4C03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for OS X-Prefix.pch"; sourceTree = "<group>"; };
+		8C2FC73A177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8C2FC73C177835B3009F4C03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C2FC73D177835B3009F4C03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C2FC740177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8C829E84177B48E300F1D0A5 /* App-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "App-icon.icns"; path = "../App-icon.icns"; sourceTree = "<group>"; };
+		8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDrawerView.xib; sourceTree = "<group>"; };
+		8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lightstreamer-logo.png"; sourceTree = "<group>"; };
+		8CC42B34177B3350005EF21F /* S-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S-logo.png"; sourceTree = "<group>"; };
+		8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLightstreamer_OSX_client.a; path = "Lightstreamer client for OS X/lib/libLightstreamer_OSX_client.a"; sourceTree = "<group>"; };
+		8CDBD4A2177995DA00EC914A /* StockListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockListWindowController.h; sourceTree = "<group>"; };
+		8CDBD4A3177995DA00EC914A /* StockListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockListWindowController.m; sourceTree = "<group>"; };
+		8CDBD4A51779988B00EC914A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8CDBD4A91779A78300EC914A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StockListWindow.xib; sourceTree = "<group>"; };
+		8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-up.png"; sourceTree = "<group>"; };
+		8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-down.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C2FC724177835B3009F4C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDBD4A717799BDE00EC914A /* SystemConfiguration.framework in Frameworks */,
+				8CDBD49C17798F5700EC914A /* libLightstreamer_OSX_client.a in Frameworks */,
+				8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C2FC71E177835B3009F4C03 = {
+			isa = PBXGroup;
+			children = (
+				8C2FC730177835B3009F4C03 /* StockList Demo for OS X */,
+				8C2FC729177835B3009F4C03 /* Frameworks */,
+				8C2FC728177835B3009F4C03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C2FC728177835B3009F4C03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C2FC729177835B3009F4C03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */,
+				8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */,
+				8C2FC72A177835B3009F4C03 /* Cocoa.framework */,
+				8C2FC72C177835B3009F4C03 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C2FC72C177835B3009F4C03 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC72D177835B3009F4C03 /* AppKit.framework */,
+				8C2FC72E177835B3009F4C03 /* CoreData.framework */,
+				8C2FC72F177835B3009F4C03 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8C2FC730177835B3009F4C03 /* StockList Demo for OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC73C177835B3009F4C03 /* AppDelegate.h */,
+				8C2FC73D177835B3009F4C03 /* AppDelegate.m */,
+				8CDBD4A51779988B00EC914A /* Constants.h */,
+				8CDBD4A2177995DA00EC914A /* StockListWindowController.h */,
+				8CDBD4A3177995DA00EC914A /* StockListWindowController.m */,
+				8CDBD4AA1779A78300EC914A /* StockListWindow.xib */,
+				8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */,
+				8C2FC73F177835B3009F4C03 /* MainMenu.xib */,
+				8C2FC731177835B3009F4C03 /* Supporting Files */,
+				8CDBD4AB1779A79200EC914A /* Graphics */,
+			);
+			path = "StockList Demo for OS X";
+			sourceTree = "<group>";
+		};
+		8C2FC731177835B3009F4C03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC732177835B3009F4C03 /* StockList Demo for OS X-Info.plist */,
+				8C2FC733177835B3009F4C03 /* InfoPlist.strings */,
+				8C2FC736177835B3009F4C03 /* main.m */,
+				8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */,
+				8C2FC739177835B3009F4C03 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CDBD4AB1779A79200EC914A /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				8C829E84177B48E300F1D0A5 /* App-icon.icns */,
+				8CC42B34177B3350005EF21F /* S-logo.png */,
+				8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */,
+				8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */,
+				8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C2FC726177835B3009F4C03 /* StockList Demo for OS X */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */;
+			buildPhases = (
+				8C2FC723177835B3009F4C03 /* Sources */,
+				8C2FC724177835B3009F4C03 /* Frameworks */,
+				8C2FC725177835B3009F4C03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StockList Demo for OS X";
+			productName = "StockList Demo for OS X";
+			productReference = 8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C2FC71F177835B3009F4C03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Weswit;
+			};
+			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C2FC71E177835B3009F4C03;
+			productRefGroup = 8C2FC728177835B3009F4C03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C2FC726177835B3009F4C03 /* StockList Demo for OS X */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C2FC725177835B3009F4C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */,
+				8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */,
+				8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */,
+				8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */,
+				8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */,
+				8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */,
+				8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */,
+				8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */,
+				8CC42B35177B3350005EF21F /* S-logo.png in Resources */,
+				8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C2FC723177835B3009F4C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2FC737177835B3009F4C03 /* main.m in Sources */,
+				8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */,
+				8CDBD4A4177995DA00EC914A /* StockListWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8C2FC733177835B3009F4C03 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2FC734177835B3009F4C03 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C2FC739177835B3009F4C03 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2FC73A177835B3009F4C03 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8C2FC73F177835B3009F4C03 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2FC740177835B3009F4C03 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		8CDBD4AA1779A78300EC914A /* StockListWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CDBD4A91779A78300EC914A /* en */,
+			);
+			name = StockListWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C2FC742177835B3009F4C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8C2FC743177835B3009F4C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8C2FC745177835B3009F4C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"./Lightstreamer client for OS X/include\"",
+				);
+				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"./Lightstreamer client for OS X/lib\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C2FC746177835B3009F4C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"./Lightstreamer client for OS X/include\"",
+				);
+				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"\"./Lightstreamer client for OS X/lib\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2FC742177835B3009F4C03 /* Debug */,
+				8C2FC743177835B3009F4C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2FC745177835B3009F4C03 /* Debug */,
+				8C2FC746177835B3009F4C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C2FC71F177835B3009F4C03 /* Project object */;
+}

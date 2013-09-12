@@ -1,0 +1,2 @@
+This folder should contain Lightstreamer library, to be used for the build process. 
+Please download the [Lightstreamer SDK for OS X Clients](http://www.lightstreamer.com/download) (sdk_client_OS_X_1.0.0_build_4.zip) and drop here all the files from the "/lib" folder inside it.
