@@ -46,3 +46,4 @@ The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstr
 # Lightstreamer Compatibility Notes #
 
 - Compatible with Lightstreamer OS X Client Library version 1.0.0 or newer.
+- For Lightstreamer Allegro+, Presto, Vivace.
