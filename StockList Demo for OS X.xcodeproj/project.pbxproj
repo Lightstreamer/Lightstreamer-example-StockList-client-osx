@@ -172,7 +172,7 @@
 		8C2FC71F177835B3009F4C03 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Weswit;
 			};
 			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */;
@@ -265,7 +265,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -297,7 +296,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -324,13 +322,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"./Lightstreamer client for OS X/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"./Lightstreamer client for OS X/include\"";
 				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"\"./Lightstreamer client for OS X/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"./Lightstreamer client for OS X/lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -343,13 +337,9 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"./Lightstreamer client for OS X/include\"",
-				);
+				HEADER_SEARCH_PATHS = "\"./Lightstreamer client for OS X/include\"";
 				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"\"./Lightstreamer client for OS X/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"./Lightstreamer client for OS X/lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
