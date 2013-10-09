@@ -15,8 +15,8 @@ The example is comprised of the following files and folders:
 Binaries for the application are provided as a zip file in the [latest release](https://github.com/Weswit/Lightstreamer-example-StockList-client-osx/releases) of this project. Under OS X 10.8 or newer, the Gatekeeper may signal the app is not signed. You can safely run the app or rebuild it with the included Xcode project.
 <br>
 Before you can build this demo you should complete this project with the Lighstreamer iOS Client library. Please:
-* drop into the "Lightstreamer client for OS X/lib" folder of this project the libLightstreamer_OSX_client.a file from the ["Lightstreamer SDK for OS X Clients"](http://www.lightstreamer.com/download).
-* drop into the "Lightstreamer client for OS X/include" folder of this project all the include files from the ["Lightstreamer SDK for OS X Clients"](http://www.lightstreamer.com/download).
+* drop into the "Lightstreamer client for OS X/lib" folder of this project the libLightstreamer_OSX_client.a file from the "/DOCS-SDKs/sdk_client_os_x/lib" of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
+* drop into the "Lightstreamer client for OS X/include" folder of this project all the include files from the "/DOCS-SDKs/sdk_client_os_x/include" of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
 
 # Deploy #
 
