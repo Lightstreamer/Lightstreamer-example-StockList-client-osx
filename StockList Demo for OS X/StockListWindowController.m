@@ -294,22 +294,6 @@
 	}
 }
 
-- (void) unsubscribeItems {
-	NSLog(@"StockListWindowController: Unsubscribing table...");
-	
-	@try {
-		[_client unsubscribeTable:_tableKey];
-		
-		[_tableKey release];
-		_tableKey= nil;
-		
-		NSLog(@"StockListWindowController: Table unsubscribed");
-		
-	} @catch (NSException *e) {
-		NSLog(@"StockListWindowController: Table unsubscription failed due to exception: %@", e);
-	}
-}
-
 
 #pragma mark -
 #pragma mark Methods of LSConnectionDelegate
@@ -317,14 +301,16 @@
 - (void) clientConnection:(LSClient *)client didStartSessionWithPolling:(BOOL)polling {
 	NSLog(@"StockListWindowController: Session started with polling: %@", (polling ? @"YES" : @"NO"));
 	
-	if (!_tableKey)
-        [self subscribeItems];
-	
 	_connected= YES;
 	_polling= polling;
 	_stalled= NO;
 	
 	[self updateStatus];
+	
+	// We subscribe, if not already subscribed. The LSClient will reconnect automatically
+	// in most of the cases, so we don't need to resubscribe each time.
+	if (!_tableKey)
+        [self subscribeItems];
 }
 
 - (void) clientConnection:(LSClient *)client didChangeActivityWarningStatus:(BOOL)warningStatus {
@@ -345,6 +331,9 @@
 	_connected= NO;
 	
 	[self updateStatus];
+	
+	// This event is called just by manually closing the connection,
+	// never happens in this example.
 }
 
 - (void) clientConnection:(LSClient *)client didEndWithCause:(int)cause {
@@ -353,6 +342,13 @@
 	_connected= NO;
 	
 	[self updateStatus];
+	
+	// In this case the session has been closed by the server, the LSClient
+	// will not automatically reconnect. Let's prepare for a new connection.
+	[_tableKey release];
+	_tableKey= nil;
+	
+	[self performSelector:@selector(connectToLightstreamer) withObject:nil afterDelay:1.0];
 }
 
 - (void) clientConnection:(LSClient *)client didReceiveDataError:(LSPushServerException *)error {
@@ -365,6 +361,8 @@
 	_connected= NO;
 	
 	[self updateStatus];
+	
+	// The LSClient will reconnect automatically in this case.
 }
 
 - (void) clientConnection:(LSClient *)client didReceiveConnectionFailure:(LSPushConnectionException *)failure {
@@ -373,6 +371,8 @@
 	_connected= NO;
 	
 	[self updateStatus];
+	
+	// The LSClient will reconnect automatically in this case.
 }
 
 - (void) clientConnection:(LSClient *)client isAboutToSendURLRequest:(NSMutableURLRequest *)urlRequest {}

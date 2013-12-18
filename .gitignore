@@ -46,3 +46,7 @@ Lightstreamer client for OS X/include/LSUpdateInfo.h
 libLightstreamer_OSX_client.a
 Lightstreamer client for OS X/include_xGit
 Lightstreamer client for OS X/lib_xGit
+Lightstreamer client for OS X/include/LSMPNTokenChangeInfo.h
+Lightstreamer client for OS X/include/LSMPNTokenStatus.h
+Lightstreamer client for OS X/include/LSMPNInfo.h
+Lightstreamer client for OS X/include/LSMPNKey.h
