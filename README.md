@@ -1,5 +1,7 @@
 # Lightstreamer - Basic Stock-List Demo - OS X Client #
 
+<!-- START DESCRIPTION lightstreamer-example-stocklist-client-osx -->
+
 This project contains an example of an application for Mac that employs the Lightstreamer OS X Client library.
 
 The example demonstrates a simple stock list application fed through a Lightstreamer connection.
@@ -9,6 +11,8 @@ The example is comprised of the following files and folders:
 - <b>"StockList Demo for OS X"</b>: sources to build the application, written in Objective-C.
 - <b>"Lightstreamer client for OS X"</b> (/lib and /include): should contain Lightstreamer library, to be used for the build process.
 - <b>"StockList Demo for OS X.xcodeproj"</b>: a full Xcode project specification, ready for a compilation of the demo sources.
+
+<!-- END DESCRIPTION lightstreamer-example-stocklist-client-osx -->
 
 # Build #
 
@@ -28,8 +32,11 @@ The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstr
 
 ## Lightstreamer Adapters needed by this demo client ##
 
+<!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
 * [Lightstreamer - Reusable Metadata Adapters- Java Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+
+<!-- END RELATED_ENTRIES -->
 
 ## Similar demo clients that may interest you ##
 
