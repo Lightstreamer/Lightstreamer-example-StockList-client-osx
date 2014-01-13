@@ -2,7 +2,7 @@
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-osx -->
 
-This project contains an example of an application for Mac that employs the Lightstreamer OS X Client library.
+This project contains an example of an application for Mac that employs the [Lightstreamer OS X Client library](http://www.lightstreamer.com/docs/client_os_x_api/index.html).
 
 The example demonstrates a simple stock list application fed through a Lightstreamer connection.
 <br>
@@ -30,7 +30,7 @@ The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstr
 
 # See Also #
 
-## Lightstreamer Adapters needed by this demo client ##
+## Lightstreamer Adapters Needed by This Demo Client ##
 
 <!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Stock-List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java)
@@ -38,7 +38,7 @@ The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstr
 
 <!-- END RELATED_ENTRIES -->
 
-## Similar demo clients that may interest you ##
+## Related Projects ##
 
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Weswit/Lightstreamer-example-Stocklist-client-javascript)
 * [Lightstreamer - Basic Stock-List Demo - iOS Client](https://github.com/Weswit/Lightstreamer-example-StockList-client-ios)
@@ -55,4 +55,4 @@ The example requires that the [QUOTE_ADAPTER](https://github.com/Weswit/Lightstr
 # Lightstreamer Compatibility Notes #
 
 - Compatible with Lightstreamer OS X Client Library version 1.0.0 or newer.
-- For Lightstreamer Allegro+, Presto, Vivace.
+- For Lightstreamer Allegro (+ OS X Client API support), Presto, Vivace.
