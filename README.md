@@ -2,10 +2,10 @@
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-osx -->
 
-This project contains an example of an application for Mac that employs the [Lightstreamer OS X Client library](http://www.lightstreamer.com/docs/client_os_x_api/index.html).
+This project contains an example of an application for Mac that employs the [Lightstreamer OS X Client library](http://www.lightstreamer.com/docs/client_os_x_api/index.html).<br>
+The example demonstrates a simple stock list application fed through a Lightstreamer connection.<br>
 
-The example demonstrates a simple stock list application fed through a Lightstreamer connection.
-<br>
+![screenshot](screen__large.png)<br>
 
 The example is comprised of the following files and folders:
 - <b>"StockList Demo for OS X"</b>: sources to build the application, written in Objective-C.
