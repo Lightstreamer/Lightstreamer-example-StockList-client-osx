@@ -23,6 +23,7 @@ DerivedData
 # Project specific
 deployment
 build_res
+Internal StockList Demo for OS X.xcodeproj
 Lightstreamer client for OS X/include/LightstreamerClient.h
 Lightstreamer client for OS X/include/LSClient.h
 Lightstreamer client for OS X/include/LSConnectionConstraints.h
@@ -43,10 +44,10 @@ Lightstreamer client for OS X/include/LSSubscriptionConstraints.h
 Lightstreamer client for OS X/include/LSTableDelegate.h
 Lightstreamer client for OS X/include/LSTableInfo.h
 Lightstreamer client for OS X/include/LSUpdateInfo.h
-libLightstreamer_OSX_client.a
-Lightstreamer client for OS X/include_xGit
-Lightstreamer client for OS X/lib_xGit
 Lightstreamer client for OS X/include/LSMPNTokenChangeInfo.h
 Lightstreamer client for OS X/include/LSMPNTokenStatus.h
 Lightstreamer client for OS X/include/LSMPNInfo.h
 Lightstreamer client for OS X/include/LSMPNKey.h
+libLightstreamer_OSX_client.a
+Lightstreamer client for OS X/compile_includes
+Lightstreamer client for OS X/compile_libs
