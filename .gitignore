@@ -36,6 +36,7 @@ Lightstreamer client for OS X/include/LSLog.h
 Lightstreamer client for OS X/include/LSMessageDelegate.h
 Lightstreamer client for OS X/include/LSMessageInfo.h
 Lightstreamer client for OS X/include/LSMode.h
+Lightstreamer client for OS X/include/LSPushClientException.h
 Lightstreamer client for OS X/include/LSPushConnectionException.h
 Lightstreamer client for OS X/include/LSPushServerException.h
 Lightstreamer client for OS X/include/LSPushUpdateException.h
@@ -44,6 +45,7 @@ Lightstreamer client for OS X/include/LSSubscriptionConstraints.h
 Lightstreamer client for OS X/include/LSTableDelegate.h
 Lightstreamer client for OS X/include/LSTableInfo.h
 Lightstreamer client for OS X/include/LSUpdateInfo.h
+Lightstreamer client for OS X/include/LSMPNStatus.h
 Lightstreamer client for OS X/include/LSMPNTokenChangeInfo.h
 Lightstreamer client for OS X/include/LSMPNTokenStatus.h
 Lightstreamer client for OS X/include/LSMPNInfo.h
