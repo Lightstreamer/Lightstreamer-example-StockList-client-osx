@@ -32,8 +32,7 @@ If you want to install a version of this demo pointing to your local Lightstream
 ## Build
 
 
-To build your own version of the demo, instead of using the one provided in the deploy.zip file from the Install section above, follow these steps.<br>
-Before you can build this demo you should complete this project with the Lighstreamer iOS Client library. Please:
+To build your own version of the demo, instead of using the one provided in the deploy.zip file from the Install section above, you should complete this project with the Lighstreamer iOS Client library. Please:
 * drop into the `Lightstreamer client for OS X/lib` folder of this project the `libLightstreamer_OSX_client.a` file from the `/DOCS-SDKs/sdk_client_os_x/lib` of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
 * drop into the `Lightstreamer client for OS X/include` folder of this project all the include files from the `/DOCS-SDKs/sdk_client_os_x/include` of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
 
