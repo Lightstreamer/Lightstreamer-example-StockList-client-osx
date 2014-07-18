@@ -87,8 +87,8 @@
 		8C2FC729177835B3009F4C03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */,
 				8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */,
+				8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */,
 				8C2FC72A177835B3009F4C03 /* Cocoa.framework */,
 				8C2FC72C177835B3009F4C03 /* Other Frameworks */,
 			);
@@ -326,7 +326,9 @@
 				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
 				LIBRARY_SEARCH_PATHS = "\"./Lightstreamer client for OS X/lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-DUSE_LOCALHOST=$(USE_LOCALHOST)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -341,7 +343,9 @@
 				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
 				LIBRARY_SEARCH_PATHS = "\"./Lightstreamer client for OS X/lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_CFLAGS = "-DUSE_LOCALHOST=$(USE_LOCALHOST)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

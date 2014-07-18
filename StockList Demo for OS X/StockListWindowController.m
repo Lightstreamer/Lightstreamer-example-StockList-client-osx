@@ -20,7 +20,15 @@
 #import "StockListWindowController.h"
 #import "Constants.h"
 
+#if USE_LOCALHOST
+
+#define SERVER_URL     (@"http://localhost:8080")
+
+#else // !USE_LOCALHOST
+
 #define SERVER_URL     (@"http://push.lightstreamer.com")
+
+#endif // USE_LOCALHOST
 
 
 @implementation StockListWindowController
