@@ -27,12 +27,12 @@ If you want to install a version of this demo pointing to your local Lightstream
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
 * Download the `deploy.zip` file that you can find in the [deploy release](https://github.com/Weswit/Lightstreamer-example-StockList-client-osx/releases) of this project and extract the `StockList Demo for OS X.app` folder.
-* Launch "StockList Demo for OS X".
+* Launch "StockList Demo for OS X". Under OS X 10.8 or newer, the Gatekeeper may signal the app is not signed. You can safely run the app or rebuild it with the included Xcode project.
 
 ## Build
 
-Binaries for the application are provided as a zip file in the [latest release](https://github.com/Weswit/Lightstreamer-example-StockList-client-osx/releases) of this project. Under OS X 10.8 or newer, the Gatekeeper may signal the app is not signed. You can safely run the app or rebuild it with the included Xcode project.
-<br>
+
+To build your own version of the demo, instead of using the one provided in the deploy.zip file from the Install section above, follow these steps.<br>
 Before you can build this demo you should complete this project with the Lighstreamer iOS Client library. Please:
 * drop into the `Lightstreamer client for OS X/lib` folder of this project the `libLightstreamer_OSX_client.a` file from the `/DOCS-SDKs/sdk_client_os_x/lib` of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
 * drop into the `Lightstreamer client for OS X/include` folder of this project all the include files from the `/DOCS-SDKs/sdk_client_os_x/include` of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
