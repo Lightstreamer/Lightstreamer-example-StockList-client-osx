@@ -53,3 +53,5 @@ Lightstreamer client for OS X/include/LSMPNKey.h
 libLightstreamer_OSX_client.a
 Lightstreamer client for OS X/compile_includes
 Lightstreamer client for OS X/compile_libs
+Lightstreamer client for OS X/compile_includes_crea_link_esterno.bat
+Lightstreamer client for OS X/compile_libs_crea_link_esterno.bat
