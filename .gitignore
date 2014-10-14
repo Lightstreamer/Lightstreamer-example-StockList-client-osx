@@ -55,3 +55,8 @@ Lightstreamer client for OS X/compile_includes
 Lightstreamer client for OS X/compile_libs
 Lightstreamer client for OS X/compile_includes_crea_link_esterno.bat
 Lightstreamer client for OS X/compile_libs_crea_link_esterno.bat
+Lightstreamer client for OS X/include/LSMPNSubscriptionStatus.h
+Lightstreamer client for OS X/include/LSMPNDeviceStatus.h
+Lightstreamer client for OS X/include/LSMPNStatusInfo.h
+Lightstreamer client for OS X/include/LSMPNSubscription.h
+
