@@ -13,6 +13,7 @@
 		8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC739177835B3009F4C03 /* Credits.rtf */; };
 		8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC73D177835B3009F4C03 /* AppDelegate.m */; };
 		8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC73F177835B3009F4C03 /* MainMenu.xib */; };
+		8C5A305B1A6E577200701AE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5A305A1A6E577200701AE4 /* Security.framework */; };
 		8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8C829E84177B48E300F1D0A5 /* App-icon.icns */; };
 		8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */; };
 		8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */; };
@@ -39,6 +40,7 @@
 		8C2FC73C177835B3009F4C03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C2FC73D177835B3009F4C03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8C2FC740177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8C5A305A1A6E577200701AE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8C829E84177B48E300F1D0A5 /* App-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "App-icon.icns"; path = "../App-icon.icns"; sourceTree = "<group>"; };
 		8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDrawerView.xib; sourceTree = "<group>"; };
 		8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lightstreamer-logo.png"; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5A305B1A6E577200701AE4 /* Security.framework in Frameworks */,
 				8CDBD4A717799BDE00EC914A /* SystemConfiguration.framework in Frameworks */,
 				8CDBD49C17798F5700EC914A /* libLightstreamer_OSX_client.a in Frameworks */,
 				8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */,
@@ -87,6 +90,7 @@
 		8C2FC729177835B3009F4C03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8C5A305A1A6E577200701AE4 /* Security.framework */,
 				8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */,
 				8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */,
 				8C2FC72A177835B3009F4C03 /* Cocoa.framework */,
