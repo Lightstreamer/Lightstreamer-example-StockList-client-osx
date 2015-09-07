@@ -36,11 +36,6 @@
 	return self;
 }
 
-- (void) dealloc {
-	[_window release];
-	
-    [super dealloc];
-}
 
 
 #pragma mark -

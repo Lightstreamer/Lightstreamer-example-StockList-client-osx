@@ -23,41 +23,5 @@ DerivedData
 # Project specific
 deployment
 build_res
-Internal StockList Demo for OS X.xcodeproj
-Lightstreamer client for OS X/include/LightstreamerClient.h
-Lightstreamer client for OS X/include/LSClient.h
-Lightstreamer client for OS X/include/LSConnectionConstraints.h
-Lightstreamer client for OS X/include/LSConnectionDelegate.h
-Lightstreamer client for OS X/include/LSConnectionInfo.h
-Lightstreamer client for OS X/include/LSConnectionStatus.h
-Lightstreamer client for OS X/include/LSException.h
-Lightstreamer client for OS X/include/LSExtendedTableInfo.h
-Lightstreamer client for OS X/include/LSLog.h
-Lightstreamer client for OS X/include/LSLogDelegate.h
-Lightstreamer client for OS X/include/LSMessageDelegate.h
-Lightstreamer client for OS X/include/LSMessageInfo.h
-Lightstreamer client for OS X/include/LSMode.h
-Lightstreamer client for OS X/include/LSPushClientException.h
-Lightstreamer client for OS X/include/LSPushConnectionException.h
-Lightstreamer client for OS X/include/LSPushServerException.h
-Lightstreamer client for OS X/include/LSPushUpdateException.h
-Lightstreamer client for OS X/include/LSSubscribedTableKey.h
-Lightstreamer client for OS X/include/LSSubscriptionConstraints.h
-Lightstreamer client for OS X/include/LSTableDelegate.h
-Lightstreamer client for OS X/include/LSTableInfo.h
-Lightstreamer client for OS X/include/LSUpdateInfo.h
-Lightstreamer client for OS X/include/LSMPNStatus.h
-Lightstreamer client for OS X/include/LSMPNTokenChangeInfo.h
-Lightstreamer client for OS X/include/LSMPNTokenStatus.h
-Lightstreamer client for OS X/include/LSMPNInfo.h
-Lightstreamer client for OS X/include/LSMPNKey.h
-libLightstreamer_OSX_client.a
-Lightstreamer client for OS X/compile_includes
-Lightstreamer client for OS X/compile_libs
-Lightstreamer client for OS X/compile_includes_crea_link_esterno.bat
-Lightstreamer client for OS X/compile_libs_crea_link_esterno.bat
-Lightstreamer client for OS X/include/LSMPNSubscriptionStatus.h
-Lightstreamer client for OS X/include/LSMPNDeviceStatus.h
-Lightstreamer client for OS X/include/LSMPNStatusInfo.h
-Lightstreamer client for OS X/include/LSMPNSubscription.h
-
+Podfile.lock
+Pods/

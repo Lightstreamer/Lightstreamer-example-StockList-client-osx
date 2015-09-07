@@ -13,17 +13,15 @@
 		8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC739177835B3009F4C03 /* Credits.rtf */; };
 		8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC73D177835B3009F4C03 /* AppDelegate.m */; };
 		8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC73F177835B3009F4C03 /* MainMenu.xib */; };
-		8C5A305B1A6E577200701AE4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5A305A1A6E577200701AE4 /* Security.framework */; };
 		8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8C829E84177B48E300F1D0A5 /* App-icon.icns */; };
 		8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */; };
 		8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */; };
 		8CC42B35177B3350005EF21F /* S-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B34177B3350005EF21F /* S-logo.png */; };
-		8CDBD49C17798F5700EC914A /* libLightstreamer_OSX_client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */; };
 		8CDBD4A4177995DA00EC914A /* StockListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDBD4A3177995DA00EC914A /* StockListWindowController.m */; };
-		8CDBD4A717799BDE00EC914A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */; };
 		8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AA1779A78300EC914A /* StockListWindow.xib */; };
 		8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */; };
 		8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */; };
+		BFD7C2CA3B6175CFB480F47E /* libPods-StockList Demo for OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F373D08809E6A36EE19C30A6 /* libPods-StockList Demo for OS X.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,19 +38,19 @@
 		8C2FC73C177835B3009F4C03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C2FC73D177835B3009F4C03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8C2FC740177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8C5A305A1A6E577200701AE4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8C829E84177B48E300F1D0A5 /* App-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "App-icon.icns"; path = "../App-icon.icns"; sourceTree = "<group>"; };
 		8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDrawerView.xib; sourceTree = "<group>"; };
 		8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lightstreamer-logo.png"; sourceTree = "<group>"; };
 		8CC42B34177B3350005EF21F /* S-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S-logo.png"; sourceTree = "<group>"; };
-		8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLightstreamer_OSX_client.a; path = "Lightstreamer client for OS X/lib/libLightstreamer_OSX_client.a"; sourceTree = "<group>"; };
 		8CDBD4A2177995DA00EC914A /* StockListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockListWindowController.h; sourceTree = "<group>"; };
 		8CDBD4A3177995DA00EC914A /* StockListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockListWindowController.m; sourceTree = "<group>"; };
 		8CDBD4A51779988B00EC914A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		8CDBD4A91779A78300EC914A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StockListWindow.xib; sourceTree = "<group>"; };
 		8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-up.png"; sourceTree = "<group>"; };
 		8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-down.png"; sourceTree = "<group>"; };
+		AD01FA9C64092E100B304DC0 /* Pods-StockList Demo for OS X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for OS X.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.release.xcconfig"; sourceTree = "<group>"; };
+		BBA77E7BDC8B5AD4E66D6482 /* Pods-StockList Demo for OS X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for OS X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.debug.xcconfig"; sourceTree = "<group>"; };
+		F373D08809E6A36EE19C30A6 /* libPods-StockList Demo for OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockList Demo for OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C5A305B1A6E577200701AE4 /* Security.framework in Frameworks */,
-				8CDBD4A717799BDE00EC914A /* SystemConfiguration.framework in Frameworks */,
-				8CDBD49C17798F5700EC914A /* libLightstreamer_OSX_client.a in Frameworks */,
 				8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */,
+				BFD7C2CA3B6175CFB480F47E /* libPods-StockList Demo for OS X.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +72,7 @@
 				8C2FC730177835B3009F4C03 /* StockList Demo for OS X */,
 				8C2FC729177835B3009F4C03 /* Frameworks */,
 				8C2FC728177835B3009F4C03 /* Products */,
+				D16D72F9F78D996EAE6ED2C1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,11 +87,9 @@
 		8C2FC729177835B3009F4C03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C5A305A1A6E577200701AE4 /* Security.framework */,
-				8CDBD49B17798F5700EC914A /* libLightstreamer_OSX_client.a */,
-				8CDBD4A617799BDE00EC914A /* SystemConfiguration.framework */,
 				8C2FC72A177835B3009F4C03 /* Cocoa.framework */,
 				8C2FC72C177835B3009F4C03 /* Other Frameworks */,
+				F373D08809E6A36EE19C30A6 /* libPods-StockList Demo for OS X.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,6 +145,15 @@
 			name = Graphics;
 			sourceTree = "<group>";
 		};
+		D16D72F9F78D996EAE6ED2C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BBA77E7BDC8B5AD4E66D6482 /* Pods-StockList Demo for OS X.debug.xcconfig */,
+				AD01FA9C64092E100B304DC0 /* Pods-StockList Demo for OS X.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */;
 			buildPhases = (
+				CD82B4425D9B22F5E1C600AE /* Check Pods Manifest.lock */,
 				8C2FC723177835B3009F4C03 /* Sources */,
 				8C2FC724177835B3009F4C03 /* Frameworks */,
 				8C2FC725177835B3009F4C03 /* Resources */,
+				01B8D0624FC0CB443F1468DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +221,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01B8D0624FC0CB443F1468DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD82B4425D9B22F5E1C600AE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8C2FC723177835B3009F4C03 /* Sources */ = {
@@ -322,15 +361,18 @@
 		};
 		8C2FC745177835B3009F4C03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBA77E7BDC8B5AD4E66D6482 /* Pods-StockList Demo for OS X.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"./Lightstreamer client for OS X/include\"";
 				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
-				LIBRARY_SEARCH_PATHS = "\"./Lightstreamer client for OS X/lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_CFLAGS = "-DUSE_LOCALHOST=$(USE_LOCALHOST)";
+				OTHER_CFLAGS = (
+					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
@@ -339,15 +381,18 @@
 		};
 		8C2FC746177835B3009F4C03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD01FA9C64092E100B304DC0 /* Pods-StockList Demo for OS X.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"./Lightstreamer client for OS X/include\"";
 				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
-				LIBRARY_SEARCH_PATHS = "\"./Lightstreamer client for OS X/lib\"";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_CFLAGS = "-DUSE_LOCALHOST=$(USE_LOCALHOST)";
+				OTHER_CFLAGS = (
+					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;

@@ -31,6 +31,41 @@
 #endif // USE_LOCALHOST
 
 
+#pragma mark -
+#pragma mark StockListWindowController extension
+
+@interface StockListWindowController () {
+    IBOutlet NSWindow *_stockListWindow;
+    IBOutlet NSTableView *_stockListTable;
+    IBOutlet NSTextField *_statusField;
+    
+    NSDrawer *_infoDrawer;
+    
+    NSArray *_itemNames;
+    NSArray *_fieldNames;
+    
+    LSLightstreamerClient *_client;
+    LSSubscription *_subscription;
+    
+    NSMutableDictionary *_itemUpdated;
+    NSMutableDictionary *_itemData;
+    
+    NSMutableSet *_rowsToBeReloaded;
+    
+    BOOL _connected;
+    BOOL _polling;
+    BOOL _stalled;
+    NSString *_status;
+}
+
+
+@end
+
+
+
+#pragma mark -
+#pragma mark StockListWindowController implementation
+
 @implementation StockListWindowController
 
 
@@ -60,17 +95,6 @@
     return self;
 }
 
-- (void) dealloc {
-	[_itemNames release];
-	[_fieldNames release];
-	
-	[_itemData release];
-	[_itemUpdated release];
-	
-	[_rowsToBeReloaded release];
-
-	[super dealloc];
-}
 
 
 #pragma mark -
@@ -87,7 +111,6 @@
 	
 	NSTableColumn *dirColumn = [_stockListTable tableColumnWithIdentifier:@"3"];
 	[dirColumn setDataCell:imageCell];
-	[imageCell release];
 	
 	// Change aspect of table (setting on xib is not effective)
 	[_stockListTable setUsesAlternatingRowBackgroundColors:YES];
@@ -277,157 +300,133 @@
 #pragma mark Lighstreamer management
 
 - (void) connectToLightstreamer {
-	_client= [[LSClient alloc] init];
+    _client= [[LSLightstreamerClient alloc] initWithServerAddress:SERVER_URL adapterSet:@"DEMO"];
 	
 	NSLog(@"StockListViewController: Connecting to Lightstreamer...");
-	
-	LSConnectionInfo *connectionInfo= [LSConnectionInfo connectionInfoWithPushServerURL:SERVER_URL pushServerControlURL:nil user:nil password:nil adapter:@"DEMO"];
-	[_client openConnectionWithInfo:connectionInfo delegate:self];
+    
+    [_client addDelegate:self];
+    [_client connect];
 }
 
 - (void) subscribeItems {
 	NSLog(@"StockListWindowController: Subscribing table...");
-	
-	@try {
-		LSExtendedTableInfo *tableInfo= [LSExtendedTableInfo extendedTableInfoWithItems:_itemNames mode:LSModeMerge fields:_fieldNames dataAdapter:@"QUOTE_ADAPTER" snapshot:YES];
-		tableInfo.requestedMaxFrequency= 1.0;
-		
-		_tableKey= [[_client subscribeTableWithExtendedInfo:tableInfo delegate:self useCommandLogic:NO] retain];
-		
-		NSLog(@"StockListWindowController: Table subscribed");
-		
-	} @catch (NSException *e) {
-		NSLog(@"StockListWindowController: Table subscription failed due to exception: %@", e);
-	}
+    
+    _subscription= [[LSSubscription alloc] initWithSubscriptionMode:@"MERGE" items:_itemNames fields:_fieldNames];
+    _subscription.dataAdapter= @"QUOTE_ADAPTER";
+    _subscription.requestedSnapshot= @"yes";
+    _subscription.requestedMaxFrequency= @"1.0";
+
+    [_subscription addDelegate:self];
+    [_client subscribe:_subscription];
+    
+    NSLog(@"StockListWindowController: Table subscribed");
 }
 
 
 #pragma mark -
-#pragma mark Methods of LSConnectionDelegate
+#pragma mark Methods of LSClientDelegate
 
-- (void) clientConnection:(LSClient *)client didStartSessionWithPolling:(BOOL)polling {
-	NSLog(@"StockListWindowController: Session started with polling: %@", (polling ? @"YES" : @"NO"));
-	
-	_connected= YES;
-	_polling= polling;
-	_stalled= NO;
-	
-	[self updateStatus];
-	
-	// We subscribe, if not already subscribed. The LSClient will reconnect automatically
-	// in most of the cases, so we don't need to resubscribe each time.
-	if (!_tableKey)
-        [self subscribeItems];
+- (void) client:(nonnull LSLightstreamerClient *)client didChangeProperty:(nonnull NSString *)property {
+    NSLog(@"StockListWindowController: Client property changed: %@", property);
 }
 
-- (void) clientConnection:(LSClient *)client didChangeActivityWarningStatus:(BOOL)warningStatus {
-	NSLog(@"StockListWindowController: Activity warning status changed: %@", (warningStatus ? @"ON" : @"OFF"));
-	
-	_stalled= warningStatus;
-	
-	[self updateStatus];
+- (void) client:(nonnull LSLightstreamerClient *)client didChangeStatus:(nonnull NSString *)status {
+    NSLog(@"StockListWindowController: Client status changed: %@", status);
+    
+    if ([status hasPrefix:@"CONNECTED:"]) {
+        _connected= YES;
+        _polling= ([status rangeOfString:@"POLLING"].location != NSNotFound);
+        _stalled= NO;
+        
+        [self updateStatus];
+        
+        // We subscribe, if not already subscribed. The LSClient will reconnect automatically
+        // in most of the cases, so we don't need to resubscribe each time.
+        if (!_subscription)
+            [self subscribeItems];
+        
+    } else if ([status hasPrefix:@"STALLED"]) {
+        _stalled= YES;
+        
+        [self updateStatus];
+
+    } else if ([status hasPrefix:@"DISCONNECTED:"]) {
+        _connected= NO;
+        
+        [self updateStatus];
+
+        // The client will reconnect automatically in this case.
+        
+    } else if ([status isEqualToString:@"DISCONNECTED"]) {
+        _connected= NO;
+        
+        [self updateStatus];
+        
+        // In this case the session has been closed by the server, the client
+        // will not automatically reconnect. Let's prepare for a new connection.
+        _subscription= nil;
+        
+        [self performSelector:@selector(connectToLightstreamer) withObject:nil afterDelay:1.0];
+    }
 }
 
-- (void) clientConnectionDidEstablish:(LSClient *)client {
-	NSLog(@"StockListWindowController: Connection established");
+- (void) client:(nonnull LSLightstreamerClient *)client didReceiveServerError:(NSInteger)errorCode withMessage:(nullable NSString *)errorMessage {
+    NSLog(@"StockListWindowController: Client received server error: %ld - %@", (long) errorCode, errorMessage);
+    
+    _connected= NO;
+    
+    [self updateStatus];
 }
-
-- (void) clientConnectionDidClose:(LSClient *)client {
-	NSLog(@"StockListWindowController: Connection closed");
-
-	_connected= NO;
-	
-	[self updateStatus];
-	
-	// This event is called just by manually closing the connection,
-	// never happens in this example.
-}
-
-- (void) clientConnection:(LSClient *)client didEndWithCause:(int)cause {
-	NSLog(@"StockListWindowController: Connection ended, cause: %d", cause);
-
-	_connected= NO;
-	
-	[self updateStatus];
-	
-	// In this case the session has been closed by the server, the LSClient
-	// will not automatically reconnect. Let's prepare for a new connection.
-	[_tableKey release];
-	_tableKey= nil;
-	
-	[self performSelector:@selector(connectToLightstreamer) withObject:nil afterDelay:1.0];
-}
-
-- (void) clientConnection:(LSClient *)client didReceiveDataError:(LSPushServerException *)error {
-	NSLog(@"StockListWindowController: Data error: %@", error);
-}
-
-- (void) clientConnection:(LSClient *)client didReceiveServerFailure:(LSPushServerException *)failure {
-	NSLog(@"StockListWindowController: Server failure: %@", failure);
-
-	_connected= NO;
-	
-	[self updateStatus];
-	
-	// The LSClient will reconnect automatically in this case.
-}
-
-- (void) clientConnection:(LSClient *)client didReceiveConnectionFailure:(LSPushConnectionException *)failure {
-	NSLog(@"StockListWindowController: Connection failure: %@", failure);
-	
-	_connected= NO;
-	
-	[self updateStatus];
-	
-	// The LSClient will reconnect automatically in this case.
-}
-
-- (void) clientConnection:(LSClient *)client isAboutToSendURLRequest:(NSMutableURLRequest *)urlRequest {}
 
 
 #pragma mark -
-#pragma mark Methods of LSTableDelegate
+#pragma mark Methods of LSSubscriptionDelegate
 
-- (void) table:(LSSubscribedTableKey *)tableKey itemPosition:(int)itemPosition itemName:(NSString *)itemName didUpdateWithInfo:(LSUpdateInfo *)updateInfo {
+- (void) subscription:(nonnull LSSubscription *)subscription didUpdateItem:(nonnull LSItemUpdate *)itemUpdate {
+    NSUInteger itemPosition= itemUpdate.itemPos;
 	NSMutableDictionary *item= nil;
 	NSMutableDictionary *itemUpdated= nil;
 	
 	@synchronized (_itemData) {
-		item= [_itemData objectForKey:[NSNumber numberWithInt:(itemPosition -1)]];
+		item= [_itemData objectForKey:[NSNumber numberWithUnsignedInteger:(itemPosition -1)]];
 		if (!item) {
-			item= [[[NSMutableDictionary alloc] initWithCapacity:NUMBER_OF_FIELDS] autorelease];
-			[_itemData setObject:item forKey:[NSNumber numberWithInt:(itemPosition -1)]];
+			item= [[NSMutableDictionary alloc] initWithCapacity:NUMBER_OF_FIELDS];
+			[_itemData setObject:item forKey:[NSNumber numberWithUnsignedInteger:(itemPosition -1)]];
 		}
 		
-		itemUpdated= [_itemUpdated objectForKey:[NSNumber numberWithInt:(itemPosition -1)]];
+		itemUpdated= [_itemUpdated objectForKey:[NSNumber numberWithUnsignedInteger:(itemPosition -1)]];
 		if (!itemUpdated) {
-			itemUpdated= [[[NSMutableDictionary alloc] initWithCapacity:NUMBER_OF_FIELDS] autorelease];
-			[_itemUpdated setObject:itemUpdated forKey:[NSNumber numberWithInt:(itemPosition -1)]];
+			itemUpdated= [[NSMutableDictionary alloc] initWithCapacity:NUMBER_OF_FIELDS];
+			[_itemUpdated setObject:itemUpdated forKey:[NSNumber numberWithUnsignedInteger:(itemPosition -1)]];
 		}
 	}
 	
+    double previousLastPrice= 0.0;
 	for (NSString *fieldName in _fieldNames) {
-		NSString *value= [updateInfo currentValueOfFieldName:fieldName];
+		NSString *value= [itemUpdate valueWithFieldName:fieldName];
 		
-		if (value)
+        // Save previous last price to choose blick color later
+        if ([fieldName isEqualToString:@"last_price"])
+            previousLastPrice= [[item objectForKey:fieldName] doubleValue];
+
+        if (value)
 			[item setObject:value forKey:fieldName];
 		else
 			[item setObject:[NSNull null] forKey:fieldName];
 		
-		if ([updateInfo isChangedValueOfFieldName:fieldName])
+		if ([itemUpdate isValueChangedWithFieldName:fieldName])
 			[itemUpdated setObject:[NSNumber numberWithBool:YES] forKey:fieldName];
 	}
 	
 	// Check variation and store appropriate color
-	double currentLastPrice= [[updateInfo currentValueOfFieldName:@"last_price"] doubleValue];
-	double previousLastPrice= [[updateInfo previousValueOfFieldName:@"last_price"] doubleValue];
+	double currentLastPrice= [[itemUpdate valueWithFieldName:@"last_price"] doubleValue];
 	if (currentLastPrice >= previousLastPrice)
 		[item setObject:@"green" forKey:@"color"];
 	else
 		[item setObject:@"orange" forKey:@"color"];
 
 	@synchronized (_rowsToBeReloaded) {
-		[_rowsToBeReloaded addObject:[NSNumber numberWithInt:(itemPosition -1)]];
+		[_rowsToBeReloaded addObject:[NSNumber numberWithUnsignedInteger:(itemPosition -1)]];
 	}
 	
 	[self performSelectorOnMainThread:@selector(reloadTableRows) withObject:nil waitUntilDone:NO];

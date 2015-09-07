@@ -20,29 +20,5 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface StockListWindowController : NSWindowController <LSConnectionDelegate, LSTableDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate> {
-	IBOutlet NSWindow *_stockListWindow;
-	IBOutlet NSTableView *_stockListTable;
-	IBOutlet NSTextField *_statusField;
-	
-	NSDrawer *_infoDrawer;
-	
-	NSArray *_itemNames;
-	NSArray *_fieldNames;
-	
-	LSClient *_client;
-	LSSubscribedTableKey *_tableKey;
-	
-	NSMutableDictionary *_itemUpdated;
-	NSMutableDictionary *_itemData;
-	
-	NSMutableSet *_rowsToBeReloaded;
-	
-	BOOL _connected;
-	BOOL _polling;
-	BOOL _stalled;
-	NSString *_status;
-}
-
-
+@interface StockListWindowController : NSWindowController <LSClientDelegate, LSSubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate>
 @end

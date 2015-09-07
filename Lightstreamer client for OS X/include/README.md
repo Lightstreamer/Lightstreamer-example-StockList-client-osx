@@ -1,2 +1,0 @@
-This folder should contain Lightstreamer library include files. 
-Please download the [Lightstreamer SDK for OS X Clients](http://www.lightstreamer.com/download) (sdk_client_OS_X_1.0.0_build_4.zip) and drop here all the include files from the "/include" folder inside it.
