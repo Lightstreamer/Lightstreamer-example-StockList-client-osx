@@ -33,6 +33,7 @@ Lightstreamer client for OS X/include/LSConnectionStatus.h
 Lightstreamer client for OS X/include/LSException.h
 Lightstreamer client for OS X/include/LSExtendedTableInfo.h
 Lightstreamer client for OS X/include/LSLog.h
+Lightstreamer client for OS X/include/LSLogDelegate.h
 Lightstreamer client for OS X/include/LSMessageDelegate.h
 Lightstreamer client for OS X/include/LSMessageInfo.h
 Lightstreamer client for OS X/include/LSMode.h
