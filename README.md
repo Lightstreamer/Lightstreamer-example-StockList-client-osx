@@ -1,4 +1,4 @@
-## Lightstreamer - Basic Stock-List Demo - OS X Client
+# Lightstreamer - Basic Stock-List Demo - OS X Client
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-osx -->
 
@@ -31,10 +31,23 @@ If you want to install a version of this demo pointing to your local Lightstream
 
 ## Build
 
+To build your own version of the demo, instead of using the one provided in the `deploy.zip` file from the Install section above, you need to install CocoaPods to handle the project dependency on the Lightstreamer OS X client library. Follow these steps:
 
-To build your own version of the demo, instead of using the one provided in the `deploy.zip` file from the Install section above, you should complete this project with the Lighstreamer iOS Client library. Please:
-* drop into the `Lightstreamer client for OS X/lib` folder of this project the `libLightstreamer_OSX_client.a` file from the `/DOCS-SDKs/sdk_client_os_x/lib` of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
-* drop into the `Lightstreamer client for OS X/include` folder of this project all the include files from the `/DOCS-SDKs/sdk_client_os_x/include` of [latest Lightstreamer distribution](http://www.lightstreamer.com/download).
+* open a terminal and run the following command:
+
+```sh
+$ sudo gem install cocoapods
+```
+
+* `cd` into the directory where you downloaded this project and run the following command:
+
+```sh
+$ pod install
+```
+
+* CocoaPods should now resolve the dependency on the Lightstreamer OS X client library and prepare a workspace for you.
+
+Done this, open the workspace with Xcode and it should compile with no errors. In case of errors during dependency resolution, you can find more information on [CocoaPods official website](https://cocoapods.org).
 
 ### Deploy
 
