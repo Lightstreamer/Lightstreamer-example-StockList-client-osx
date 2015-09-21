@@ -182,7 +182,7 @@
 		8C2FC71F177835B3009F4C03 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Weswit;
 			};
 			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */;
@@ -316,6 +316,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -373,6 +374,7 @@
 					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.osx.stockslist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
@@ -393,6 +395,7 @@
 					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
 					"$(inherited)",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.osx.stockslist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
