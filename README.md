@@ -82,6 +82,6 @@ the [LiteralBasedProvider](https://github.com/Weswit/Lightstreamer-example-Reusa
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer OS X Client Library version 1.0.0 or newer.
+* Compatible with Lightstreamer OS X Client Library version 2.0.0-a1 or newer.
 * For Lightstreamer Allegro (+ OS X Client API support), Presto, Vivace.
 * For a version of this example compatible with Lightstreamer OS X Client API version 1.x, please refer to [this tag](https://github.com/Weswit/Lightstreamer-example-StockList-client-osx/tree/latest-for-client-1.x).
