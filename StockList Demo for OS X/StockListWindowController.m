@@ -26,7 +26,7 @@
 
 #else // !USE_LOCALHOST
 
-#define SERVER_URL     (@"http://push.lightstreamer.com")
+#define SERVER_URL     (@"https://push.lightstreamer.com")
 
 #endif // USE_LOCALHOST
 
