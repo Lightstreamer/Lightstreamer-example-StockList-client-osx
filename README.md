@@ -12,11 +12,9 @@ This project contains an example of an application for Mac that employs the [Lig
 
 ### Details
 
-The example demonstrates a simple stock list application fed through a Lightstreamer connection.<br>
-The example is comprised of the following files and folders:
-- <b>"StockList Demo for OS X"</b>: sources to build the application, written in Objective-C.
-- <b>"Lightstreamer client for OS X"</b> (/lib and /include): should contain Lightstreamer library, to be used for the build process.
-- <b>"StockList Demo for OS X.xcodeproj"</b>: a full Xcode project specification, ready for a compilation of the demo sources.
+This app, compatible with Mac OS X, is an Objective-C version of the [Stock-List Demos](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript).<br>
+
+This app uses the <b>OS X Client API for Lightstreamer</b> to handle the communications with Lightstreamer Server. A simple user interface is implemented to display the real-time data received from Lightstreamer Server.<br>
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-osx -->
 
