@@ -22,11 +22,17 @@
 
 #if USE_LOCALHOST
 
-#define SERVER_URL     (@"http://localhost:8080")
+// Configuration for local installation
+#define PUSH_SERVER_URL            (@"http://localhost:8080/")
+#define ADAPTER_SET                (@"STOCKLISTDEMO")
+#define DATA_ADAPTER               (@"STOCKLIST_ADAPTER")
 
 #else // !USE_LOCALHOST
 
-#define SERVER_URL     (@"https://push.lightstreamer.com")
+// Configuration for online demo server
+#define PUSH_SERVER_URL            (@"https://push.lightstreamer.com")
+#define ADAPTER_SET                (@"DEMO")
+#define DATA_ADAPTER               (@"QUOTE_ADAPTER")
 
 #endif // USE_LOCALHOST
 
@@ -84,12 +90,6 @@
 		_itemUpdated= [[NSMutableDictionary alloc] initWithCapacity:NUMBER_OF_ITEMS];
 		
 		_rowsToBeReloaded= [[NSMutableSet alloc] initWithCapacity:NUMBER_OF_ITEMS];
-		
-		// Uncomment for detailed logging
-//		[LSLog enableSourceType:LOG_SRC_CLIENT];
-//		[LSLog enableSourceType:LOG_SRC_SESSION];
-//		[LSLog enableSourceType:LOG_SRC_STATE_MACHINE];
-//		[LSLog enableSourceType:LOG_SRC_URL_DISPATCHER];
     }
     
     return self;
@@ -300,7 +300,7 @@
 #pragma mark Lighstreamer management
 
 - (void) connectToLightstreamer {
-    _client= [[LSLightstreamerClient alloc] initWithServerAddress:SERVER_URL adapterSet:@"DEMO"];
+    _client= [[LSLightstreamerClient alloc] initWithServerAddress:PUSH_SERVER_URL adapterSet:ADAPTER_SET];
 	
 	NSLog(@"StockListViewController: Connecting to Lightstreamer...");
     
@@ -312,7 +312,7 @@
 	NSLog(@"StockListWindowController: Subscribing table...");
     
     _subscription= [[LSSubscription alloc] initWithSubscriptionMode:@"MERGE" items:_itemNames fields:_fieldNames];
-    _subscription.dataAdapter= @"QUOTE_ADAPTER";
+    _subscription.dataAdapter= DATA_ADAPTER;
     _subscription.requestedSnapshot= @"yes";
     _subscription.requestedMaxFrequency= @"1.0";
 
