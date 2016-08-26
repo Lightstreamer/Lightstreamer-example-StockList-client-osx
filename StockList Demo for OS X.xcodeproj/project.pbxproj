@@ -1,1025 +1,445 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>01B8D0624FC0CB443F1468DA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>0CBCD7C226CA6F01B8E638E0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>4789B28B0F77FEA1FE7CD648</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F373D08809E6A36EE19C30A6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC71E177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC730177835B3009F4C03</string>
-				<string>8C2FC729177835B3009F4C03</string>
-				<string>8C2FC728177835B3009F4C03</string>
-				<string>D16D72F9F78D996EAE6ED2C1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC71F177835B3009F4C03</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Weswit</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>8C2FC722177835B3009F4C03</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>8C2FC71E177835B3009F4C03</string>
-			<key>productRefGroup</key>
-			<string>8C2FC728177835B3009F4C03</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>8C2FC726177835B3009F4C03</string>
-			</array>
-		</dict>
-		<key>8C2FC722177835B3009F4C03</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8C2FC742177835B3009F4C03</string>
-				<string>8C2FC743177835B3009F4C03</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8C2FC723177835B3009F4C03</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8C2FC737177835B3009F4C03</string>
-				<string>8C2FC73E177835B3009F4C03</string>
-				<string>8CDBD4A4177995DA00EC914A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8C2FC724177835B3009F4C03</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8C2FC72B177835B3009F4C03</string>
-				<string>4789B28B0F77FEA1FE7CD648</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8C2FC725177835B3009F4C03</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>8C2FC735177835B3009F4C03</string>
-				<string>8C2FC73B177835B3009F4C03</string>
-				<string>8C2FC741177835B3009F4C03</string>
-				<string>8CDBD4A81779A78300EC914A</string>
-				<string>8CDBD4AE1779A7CA00EC914A</string>
-				<string>8CDBD4AF1779A7CA00EC914A</string>
-				<string>8CC42B31177B29C6005EF21F</string>
-				<string>8CC42B33177B2D6D005EF21F</string>
-				<string>8CC42B35177B3350005EF21F</string>
-				<string>8C829E85177B48E300F1D0A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>8C2FC726177835B3009F4C03</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>8C2FC744177835B3009F4C03</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CD82B4425D9B22F5E1C600AE</string>
-				<string>8C2FC723177835B3009F4C03</string>
-				<string>8C2FC724177835B3009F4C03</string>
-				<string>8C2FC725177835B3009F4C03</string>
-				<string>01B8D0624FC0CB443F1468DA</string>
-				<string>0CBCD7C226CA6F01B8E638E0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>StockList Demo for OS X</string>
-			<key>productName</key>
-			<string>StockList Demo for OS X</string>
-			<key>productReference</key>
-			<string>8C2FC727177835B3009F4C03</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>8C2FC727177835B3009F4C03</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>StockList Demo for OS X.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>8C2FC728177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC727177835B3009F4C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC729177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC72A177835B3009F4C03</string>
-				<string>8C2FC72C177835B3009F4C03</string>
-				<string>F373D08809E6A36EE19C30A6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC72A177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Cocoa.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Cocoa.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8C2FC72B177835B3009F4C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C2FC72A177835B3009F4C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC72C177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC72D177835B3009F4C03</string>
-				<string>8C2FC72E177835B3009F4C03</string>
-				<string>8C2FC72F177835B3009F4C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Other Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC72D177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>AppKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/AppKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8C2FC72E177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreData.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreData.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8C2FC72F177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>8C2FC730177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC73C177835B3009F4C03</string>
-				<string>8C2FC73D177835B3009F4C03</string>
-				<string>8CDBD4A51779988B00EC914A</string>
-				<string>8CDBD4A2177995DA00EC914A</string>
-				<string>8CDBD4A3177995DA00EC914A</string>
-				<string>8CDBD4AA1779A78300EC914A</string>
-				<string>8CC42B30177B29C6005EF21F</string>
-				<string>8C2FC73F177835B3009F4C03</string>
-				<string>8C2FC731177835B3009F4C03</string>
-				<string>8CDBD4AB1779A79200EC914A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>StockList Demo for OS X</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC731177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC732177835B3009F4C03</string>
-				<string>8C2FC733177835B3009F4C03</string>
-				<string>8C2FC736177835B3009F4C03</string>
-				<string>8C2FC738177835B3009F4C03</string>
-				<string>8C2FC739177835B3009F4C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC732177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>StockList Demo for OS X-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC733177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC734177835B3009F4C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC734177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC735177835B3009F4C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C2FC733177835B3009F4C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC736177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC737177835B3009F4C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C2FC736177835B3009F4C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC738177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>StockList Demo for OS X-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC739177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC73A177835B3009F4C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Credits.rtf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC73A177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.rtf</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/Credits.rtf</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC73B177835B3009F4C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C2FC739177835B3009F4C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC73C177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC73D177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC73E177835B3009F4C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C2FC73D177835B3009F4C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC73F177835B3009F4C03</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C2FC740177835B3009F4C03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>MainMenu.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC740177835B3009F4C03</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/MainMenu.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C2FC741177835B3009F4C03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C2FC73F177835B3009F4C03</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8C2FC742177835B3009F4C03</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8C2FC743177835B3009F4C03</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.8</string>
-				<key>SDKROOT</key>
-				<string>macosx</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8C2FC744177835B3009F4C03</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8C2FC745177835B3009F4C03</string>
-				<string>8C2FC746177835B3009F4C03</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>8C2FC745177835B3009F4C03</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BBA77E7BDC8B5AD4E66D6482</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>StockList Demo for OS X/StockList Demo for OS X-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>StockList Demo for OS X/StockList Demo for OS X-Info.plist</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DUSE_LOCALHOST=$(USE_LOCALHOST)</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.lightstreamer.osx.stockslist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>USE_LOCALHOST</key>
-				<string>0</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>8C2FC746177835B3009F4C03</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>AD01FA9C64092E100B304DC0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>COMBINE_HIDPI_IMAGES</key>
-				<string>YES</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>StockList Demo for OS X/StockList Demo for OS X-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>StockList Demo for OS X/StockList Demo for OS X-Info.plist</string>
-				<key>MACOSX_DEPLOYMENT_TARGET</key>
-				<string>10.7</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DUSE_LOCALHOST=$(USE_LOCALHOST)</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.lightstreamer.osx.stockslist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>USE_LOCALHOST</key>
-				<string>0</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>8C829E84177B48E300F1D0A5</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.icns</string>
-			<key>name</key>
-			<string>App-icon.icns</string>
-			<key>path</key>
-			<string>../App-icon.icns</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C829E85177B48E300F1D0A5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C829E84177B48E300F1D0A5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CC42B30177B29C6005EF21F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>path</key>
-			<string>InfoDrawerView.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CC42B31177B29C6005EF21F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CC42B30177B29C6005EF21F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CC42B32177B2D6D005EF21F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Lightstreamer-logo.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CC42B33177B2D6D005EF21F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CC42B32177B2D6D005EF21F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CC42B34177B3350005EF21F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>S-logo.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CC42B35177B3350005EF21F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CC42B34177B3350005EF21F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CDBD4A2177995DA00EC914A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>StockListWindowController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4A3177995DA00EC914A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>StockListWindowController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4A4177995DA00EC914A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CDBD4A3177995DA00EC914A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CDBD4A51779988B00EC914A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Constants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4A81779A78300EC914A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CDBD4AA1779A78300EC914A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CDBD4A91779A78300EC914A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.xib</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/StockListWindow.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4AA1779A78300EC914A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8CDBD4A91779A78300EC914A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>StockListWindow.xib</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4AB1779A79200EC914A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C829E84177B48E300F1D0A5</string>
-				<string>8CC42B34177B3350005EF21F</string>
-				<string>8CC42B32177B2D6D005EF21F</string>
-				<string>8CDBD4AC1779A7CA00EC914A</string>
-				<string>8CDBD4AD1779A7CA00EC914A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Graphics</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4AC1779A7CA00EC914A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Arrow-up.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4AD1779A7CA00EC914A</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>Arrow-down.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8CDBD4AE1779A7CA00EC914A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CDBD4AC1779A7CA00EC914A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>8CDBD4AF1779A7CA00EC914A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8CDBD4AD1779A7CA00EC914A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AD01FA9C64092E100B304DC0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-StockList Demo for OS X.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BBA77E7BDC8B5AD4E66D6482</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-StockList Demo for OS X.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD82B4425D9B22F5E1C600AE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D16D72F9F78D996EAE6ED2C1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BBA77E7BDC8B5AD4E66D6482</string>
-				<string>AD01FA9C64092E100B304DC0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F373D08809E6A36EE19C30A6</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-StockList Demo for OS X.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>8C2FC71F177835B3009F4C03</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		677944CFB37568DC77134E80 /* libPods-StockList Demo for OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 843D7EC80F34B919A727C20C /* libPods-StockList Demo for OS X.a */; };
+		8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2FC72A177835B3009F4C03 /* Cocoa.framework */; };
+		8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC733177835B3009F4C03 /* InfoPlist.strings */; };
+		8C2FC737177835B3009F4C03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC736177835B3009F4C03 /* main.m */; };
+		8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC739177835B3009F4C03 /* Credits.rtf */; };
+		8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC73D177835B3009F4C03 /* AppDelegate.m */; };
+		8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC73F177835B3009F4C03 /* MainMenu.xib */; };
+		8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8C829E84177B48E300F1D0A5 /* App-icon.icns */; };
+		8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */; };
+		8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */; };
+		8CC42B35177B3350005EF21F /* S-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B34177B3350005EF21F /* S-logo.png */; };
+		8CDBD4A4177995DA00EC914A /* StockListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDBD4A3177995DA00EC914A /* StockListWindowController.m */; };
+		8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AA1779A78300EC914A /* StockListWindow.xib */; };
+		8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */; };
+		8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		55CF009BDF354A32984233B4 /* Pods-StockList Demo for OS X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for OS X.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.release.xcconfig"; sourceTree = "<group>"; };
+		560ACF14A3C5640C1E0B88E9 /* Pods-StockList Demo for OS X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for OS X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.debug.xcconfig"; sourceTree = "<group>"; };
+		843D7EC80F34B919A727C20C /* libPods-StockList Demo for OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockList Demo for OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockList Demo for OS X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C2FC72A177835B3009F4C03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8C2FC72D177835B3009F4C03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8C2FC72E177835B3009F4C03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8C2FC72F177835B3009F4C03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8C2FC732177835B3009F4C03 /* StockList Demo for OS X-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockList Demo for OS X-Info.plist"; sourceTree = "<group>"; };
+		8C2FC734177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8C2FC736177835B3009F4C03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for OS X-Prefix.pch"; sourceTree = "<group>"; };
+		8C2FC73A177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8C2FC73C177835B3009F4C03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8C2FC73D177835B3009F4C03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8C2FC740177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8C829E84177B48E300F1D0A5 /* App-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "App-icon.icns"; path = "../App-icon.icns"; sourceTree = "<group>"; };
+		8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDrawerView.xib; sourceTree = "<group>"; };
+		8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lightstreamer-logo.png"; sourceTree = "<group>"; };
+		8CC42B34177B3350005EF21F /* S-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S-logo.png"; sourceTree = "<group>"; };
+		8CDBD4A2177995DA00EC914A /* StockListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockListWindowController.h; sourceTree = "<group>"; };
+		8CDBD4A3177995DA00EC914A /* StockListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockListWindowController.m; sourceTree = "<group>"; };
+		8CDBD4A51779988B00EC914A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8CDBD4A91779A78300EC914A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StockListWindow.xib; sourceTree = "<group>"; };
+		8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-up.png"; sourceTree = "<group>"; };
+		8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-down.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C2FC724177835B3009F4C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */,
+				677944CFB37568DC77134E80 /* libPods-StockList Demo for OS X.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01F617BEAA767AB9B2DA2FB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				560ACF14A3C5640C1E0B88E9 /* Pods-StockList Demo for OS X.debug.xcconfig */,
+				55CF009BDF354A32984233B4 /* Pods-StockList Demo for OS X.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C2FC71E177835B3009F4C03 = {
+			isa = PBXGroup;
+			children = (
+				8C2FC730177835B3009F4C03 /* StockList Demo for OS X */,
+				8C2FC729177835B3009F4C03 /* Frameworks */,
+				8C2FC728177835B3009F4C03 /* Products */,
+				01F617BEAA767AB9B2DA2FB1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		8C2FC728177835B3009F4C03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C2FC729177835B3009F4C03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC72A177835B3009F4C03 /* Cocoa.framework */,
+				8C2FC72C177835B3009F4C03 /* Other Frameworks */,
+				843D7EC80F34B919A727C20C /* libPods-StockList Demo for OS X.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C2FC72C177835B3009F4C03 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC72D177835B3009F4C03 /* AppKit.framework */,
+				8C2FC72E177835B3009F4C03 /* CoreData.framework */,
+				8C2FC72F177835B3009F4C03 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8C2FC730177835B3009F4C03 /* StockList Demo for OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC73C177835B3009F4C03 /* AppDelegate.h */,
+				8C2FC73D177835B3009F4C03 /* AppDelegate.m */,
+				8CDBD4A51779988B00EC914A /* Constants.h */,
+				8CDBD4A2177995DA00EC914A /* StockListWindowController.h */,
+				8CDBD4A3177995DA00EC914A /* StockListWindowController.m */,
+				8CDBD4AA1779A78300EC914A /* StockListWindow.xib */,
+				8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */,
+				8C2FC73F177835B3009F4C03 /* MainMenu.xib */,
+				8C2FC731177835B3009F4C03 /* Supporting Files */,
+				8CDBD4AB1779A79200EC914A /* Graphics */,
+			);
+			path = "StockList Demo for OS X";
+			sourceTree = "<group>";
+		};
+		8C2FC731177835B3009F4C03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C2FC732177835B3009F4C03 /* StockList Demo for OS X-Info.plist */,
+				8C2FC733177835B3009F4C03 /* InfoPlist.strings */,
+				8C2FC736177835B3009F4C03 /* main.m */,
+				8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */,
+				8C2FC739177835B3009F4C03 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8CDBD4AB1779A79200EC914A /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				8C829E84177B48E300F1D0A5 /* App-icon.icns */,
+				8CC42B34177B3350005EF21F /* S-logo.png */,
+				8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */,
+				8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */,
+				8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C2FC726177835B3009F4C03 /* StockList Demo for OS X */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */;
+			buildPhases = (
+				6312AB28AB951DFB01D50ECD /* 📦 Check Pods Manifest.lock */,
+				8C2FC723177835B3009F4C03 /* Sources */,
+				8C2FC724177835B3009F4C03 /* Frameworks */,
+				8C2FC725177835B3009F4C03 /* Resources */,
+				1DD147C56338CC74FAFF926D /* 📦 Embed Pods Frameworks */,
+				0949EC47131F95B764793279 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StockList Demo for OS X";
+			productName = "StockList Demo for OS X";
+			productReference = 8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C2FC71F177835B3009F4C03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Weswit;
+			};
+			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8C2FC71E177835B3009F4C03;
+			productRefGroup = 8C2FC728177835B3009F4C03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C2FC726177835B3009F4C03 /* StockList Demo for OS X */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C2FC725177835B3009F4C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */,
+				8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */,
+				8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */,
+				8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */,
+				8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */,
+				8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */,
+				8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */,
+				8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */,
+				8CC42B35177B3350005EF21F /* S-logo.png in Resources */,
+				8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0949EC47131F95B764793279 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DD147C56338CC74FAFF926D /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6312AB28AB951DFB01D50ECD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C2FC723177835B3009F4C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C2FC737177835B3009F4C03 /* main.m in Sources */,
+				8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */,
+				8CDBD4A4177995DA00EC914A /* StockListWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8C2FC733177835B3009F4C03 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2FC734177835B3009F4C03 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8C2FC739177835B3009F4C03 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2FC73A177835B3009F4C03 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8C2FC73F177835B3009F4C03 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C2FC740177835B3009F4C03 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		8CDBD4AA1779A78300EC914A /* StockListWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CDBD4A91779A78300EC914A /* en */,
+			);
+			name = StockListWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C2FC742177835B3009F4C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8C2FC743177835B3009F4C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8C2FC745177835B3009F4C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 560ACF14A3C5640C1E0B88E9 /* Pods-StockList Demo for OS X.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
+				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.osx.stockslist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_LOCALHOST = 0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8C2FC746177835B3009F4C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CF009BDF354A32984233B4 /* Pods-StockList Demo for OS X.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
+				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = (
+					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.osx.stockslist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USE_LOCALHOST = 0;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2FC742177835B3009F4C03 /* Debug */,
+				8C2FC743177835B3009F4C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C2FC745177835B3009F4C03 /* Debug */,
+				8C2FC746177835B3009F4C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C2FC71F177835B3009F4C03 /* Project object */;
+}
