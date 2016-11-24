@@ -1,6 +1,6 @@
 //
 //  StockListWindowController.m
-//  StockList Demo for OS X
+//  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
 //

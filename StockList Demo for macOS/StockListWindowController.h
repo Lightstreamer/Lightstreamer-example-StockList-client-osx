@@ -1,6 +1,6 @@
 //
-//  AppDelegate.h
-//  StockList Demo for OS X
+//  StockListWindowController.h
+//  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
 //
@@ -20,11 +20,5 @@
 #import <Cocoa/Cocoa.h>
 
 
-@class StockListWindowController;
-
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
-	StockListWindowController *_window;
-}
-
-
+@interface StockListWindowController : NSWindowController <LSClientDelegate, LSSubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate>
 @end

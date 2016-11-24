@@ -1,6 +1,6 @@
 //
 //  Constants.h
-//  StockList Demo for OS X
+//  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
 //
@@ -17,8 +17,8 @@
 // limitations under the License.
 //
 
-#ifndef StockList_Demo_for_OS_X_Constants_h
-#define StockList_Demo_for_OS_X_Constants_h
+#ifndef StockList_Demo_for_macOS_Constants_h
+#define StockList_Demo_for_macOS_Constants_h
 
 
 #define NUMBER_OF_ITEMS    (30)

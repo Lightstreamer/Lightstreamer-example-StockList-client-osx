@@ -1,6 +1,6 @@
 //
-//  main.m
-//  StockList Demo for OS X
+//  AppDelegate.h
+//  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
 //
@@ -19,7 +19,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-int main(int argc, char *argv[])
-{
-	return NSApplicationMain(argc, (const char **)argv);
+
+@class StockListWindowController;
+
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+	StockListWindowController *_window;
 }
+
+
+@end

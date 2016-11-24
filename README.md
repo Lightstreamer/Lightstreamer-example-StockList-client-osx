@@ -1,22 +1,22 @@
-# Lightstreamer - Basic Stock-List Demo - OS X Client
+# Lightstreamer - Basic Stock-List Demo - macOS Client
 
-<!-- START DESCRIPTION lightstreamer-example-stocklist-client-osx -->
+<!-- START DESCRIPTION lightstreamer-example-stocklist-client-macos -->
 
-This project contains an example of an application for Mac that employs the [Lightstreamer OS X Client library](http://www.lightstreamer.com/docs/client_os_x_api/index.html).
+This project contains an example of an application for Mac that employs the [Lightstreamer macOS Client library](http://www.lightstreamer.com/api/ls-macos-client/latest/).
 
 ## Live Demo
 
 [![screenshot](screen_large.png)](http://demos.lightstreamer.com/StockListDemo_OSX/StockList Demo for OS X-uni.app.zip)<br>
 ###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/StockListDemo_OSX/StockList Demo for OS X-uni.app.zip)<br>
-(download "StockList Demo for OS X-uni.app.zip"; unzip it; launch "StockList Demo for OS X")
+(download "StockList Demo for OS X-uni.app.zip"; unzip it; launch "StockList Demo for macOS")
 
 ### Details
 
-This app, compatible with Mac OS X, is an Objective-C version of the [Stock-List Demos](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript).<br>
+This app, compatible with macOS, is an Objective-C version of the [Stock-List Demos](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript).<br>
 
-This app uses the <b>OS X Client API for Lightstreamer</b> to handle the communications with Lightstreamer Server. A simple user interface is implemented to display the real-time data received from Lightstreamer Server.<br>
+This app uses the <b>macOS Client API for Lightstreamer</b> to handle the communications with Lightstreamer Server. A simple user interface is implemented to display the real-time data received from Lightstreamer Server.<br>
 
-<!-- END DESCRIPTION lightstreamer-example-stocklist-client-osx -->
+<!-- END DESCRIPTION lightstreamer-example-stocklist-client-macos -->
 
 ## Install
 
@@ -24,12 +24,12 @@ If you want to install a version of this demo pointing to your local Lightstream
 
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
-* Download the `deploy.zip` file, which you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-osx/releases) of this project and extract the `StockList Demo for OS X.app` folder.
-* Launch "StockList Demo for OS X". Under OS X 10.8 or newer, the Gatekeeper may signal the app is not signed. You can safely run the app or rebuild it with the included Xcode project.
+* Download the `deploy.zip` file, which you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-macos/releases) of this project and extract the `StockList Demo for macOS.app` folder.
+* Launch "StockList Demo for macOS". The Gatekeeper may signal the app is not signed. You can safely run the app or rebuild it with the included Xcode project.
 
 ## Build
 
-To build your own version of the demo, instead of using the one provided in the `deploy.zip` file from the Install section above, you need to install CocoaPods to handle the project dependency on the Lightstreamer OS X client library. Follow these steps:
+To build your own version of the demo, instead of using the one provided in the `deploy.zip` file from the Install section above, you need to install CocoaPods to handle the project dependency on the Lightstreamer macOS client library. Follow these steps:
 
 * open a terminal and run the following command:
 
@@ -43,14 +43,14 @@ $ sudo gem install cocoapods
 $ pod install
 ```
 
-* CocoaPods should now resolve the dependency on the Lightstreamer OS X client library and prepare a workspace for you.
+* CocoaPods should now resolve the dependency on the Lightstreamer macOS client library and prepare a workspace for you.
 
 Done this, open the workspace with Xcode and it should compile with no errors. In case of errors during dependency resolution, you can find more information on [CocoaPods official website](https://cocoapods.org).
 
 ### Deploy
 
 With the current settings, the demo tries to connect to the demo server currently running on Lightstreamer website.<br>
-The demo can be reconfigured and recompiled to connect to the local installation of Lightstreamer Server. You just have to change SERVER_URL, as defined in `StockList Demo for OS X/StockListWindowController.m`; a ":port" part can also be added.
+The demo can be reconfigured and recompiled to connect to the local installation of Lightstreamer Server. You just have to change SERVER_URL, as defined in `StockList Demo for macOS/StockListWindowController.m`; a ":port" part can also be added.
 The example requires that the [QUOTE_ADAPTER](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed in your local Lightstreamer server instance;
 the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-example-ReusableMetadata-adapter-java) is also needed, but it is already provided by Lightstreamer server.<br>
 
@@ -80,6 +80,6 @@ the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-exampl
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer OS X Client Library version 2.0.0-a1 or newer.
-* For Lightstreamer Allegro (+ OS X Client API support), Presto, Vivace.
-* For a version of this example compatible with Lightstreamer OS X Client API version 1.x, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-osx/tree/latest-for-client-1.x).
+* Compatible with Lightstreamer macOS Client Library version 2.0.0-a1 or newer.
+* For Lightstreamer Allegro (+ macOS Client API support), Presto, Vivace.
+* For a version of this example compatible with Lightstreamer macOS Client API version 1.x, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-macos/tree/latest-for-client-1.x).

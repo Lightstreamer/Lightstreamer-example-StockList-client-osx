@@ -1,6 +1,6 @@
 //
-//  AppDelegate.m
-//  StockList Demo for OS X
+//  main.m
+//  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
 //
@@ -17,36 +17,9 @@
 // limitations under the License.
 //
 
-#import "AppDelegate.h"
-#import "StockListWindowController.h"
+#import <Cocoa/Cocoa.h>
 
-
-@implementation AppDelegate
-
-
-#pragma mark -
-#pragma mark Initialization
-
-- (id) init {
-	if ((self = [super init])) {
-		
-		// Nothing to do
-	}
-	
-	return self;
+int main(int argc, char *argv[])
+{
+	return NSApplicationMain(argc, (const char **)argv);
 }
-
-
-
-#pragma mark -
-#pragma mark NSApplicationDelegate methods
-
-- (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
-	
-	// Open window
-	_window= [[StockListWindowController alloc] init];
-	[_window showWindow:nil];
-}
-
-
-@end

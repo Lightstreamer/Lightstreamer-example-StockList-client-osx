@@ -1,6 +1,6 @@
 //
-//  StockListWindowController.h
-//  StockList Demo for OS X
+//  AppDelegate.m
+//  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
 //
@@ -17,8 +17,36 @@
 // limitations under the License.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "AppDelegate.h"
+#import "StockListWindowController.h"
 
 
-@interface StockListWindowController : NSWindowController <LSClientDelegate, LSSubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate>
+@implementation AppDelegate
+
+
+#pragma mark -
+#pragma mark Initialization
+
+- (id) init {
+	if ((self = [super init])) {
+		
+		// Nothing to do
+	}
+	
+	return self;
+}
+
+
+
+#pragma mark -
+#pragma mark NSApplicationDelegate methods
+
+- (void) applicationDidFinishLaunching:(NSNotification *)aNotification {
+	
+	// Open window
+	_window= [[StockListWindowController alloc] init];
+	[_window showWindow:nil];
+}
+
+
 @end

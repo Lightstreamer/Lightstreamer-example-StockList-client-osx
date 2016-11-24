@@ -4,5 +4,5 @@
 
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
-	#import <LightstreamerClientAll.h>
+	#import <Lightstreamer_macOS_Client/Lightstreamer_macOS_Client.h>
 #endif

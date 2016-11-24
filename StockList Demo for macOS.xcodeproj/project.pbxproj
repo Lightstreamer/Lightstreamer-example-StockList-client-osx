@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		677944CFB37568DC77134E80 /* libPods-StockList Demo for OS X.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 843D7EC80F34B919A727C20C /* libPods-StockList Demo for OS X.a */; };
+		0A2245028950CF147D3F977B /* Pods_StockList_Demo_for_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015F1A77456A5AEF16DB10D4 /* Pods_StockList_Demo_for_macOS.framework */; };
 		8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2FC72A177835B3009F4C03 /* Cocoa.framework */; };
 		8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC733177835B3009F4C03 /* InfoPlist.strings */; };
 		8C2FC737177835B3009F4C03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC736177835B3009F4C03 /* main.m */; };
@@ -25,15 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		55CF009BDF354A32984233B4 /* Pods-StockList Demo for OS X.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for OS X.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.release.xcconfig"; sourceTree = "<group>"; };
-		560ACF14A3C5640C1E0B88E9 /* Pods-StockList Demo for OS X.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for OS X.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X.debug.xcconfig"; sourceTree = "<group>"; };
-		843D7EC80F34B919A727C20C /* libPods-StockList Demo for OS X.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StockList Demo for OS X.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockList Demo for OS X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		015F1A77456A5AEF16DB10D4 /* Pods_StockList_Demo_for_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockList_Demo_for_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A39CC685570FEFA1F59998F /* Pods-StockList Demo for macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for macOS/Pods-StockList Demo for macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		8C2FC727177835B3009F4C03 /* StockList Demo for macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockList Demo for macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2FC72A177835B3009F4C03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8C2FC72D177835B3009F4C03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8C2FC72E177835B3009F4C03 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8C2FC72F177835B3009F4C03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8C2FC732177835B3009F4C03 /* StockList Demo for OS X-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockList Demo for OS X-Info.plist"; sourceTree = "<group>"; };
+		8C2FC732177835B3009F4C03 /* StockList Demo for macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockList Demo for macOS-Info.plist"; sourceTree = "<group>"; };
 		8C2FC734177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C2FC736177835B3009F4C03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for OS X-Prefix.pch"; sourceTree = "<group>"; };
@@ -51,6 +50,8 @@
 		8CDBD4A91779A78300EC914A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StockListWindow.xib; sourceTree = "<group>"; };
 		8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-up.png"; sourceTree = "<group>"; };
 		8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-down.png"; sourceTree = "<group>"; };
+		B1B96DDDA5C6C41D1D67C041 /* Pods-StockList Demo for macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for macOS/Pods-StockList Demo for macOS.release.xcconfig"; sourceTree = "<group>"; };
+		BB94A285A0D06C376C2FC918 /* Pods_StockList_Demo_for_OS_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockList_Demo_for_OS_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */,
-				677944CFB37568DC77134E80 /* libPods-StockList Demo for OS X.a in Frameworks */,
+				0A2245028950CF147D3F977B /* Pods_StockList_Demo_for_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +70,8 @@
 		01F617BEAA767AB9B2DA2FB1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				560ACF14A3C5640C1E0B88E9 /* Pods-StockList Demo for OS X.debug.xcconfig */,
-				55CF009BDF354A32984233B4 /* Pods-StockList Demo for OS X.release.xcconfig */,
+				2A39CC685570FEFA1F59998F /* Pods-StockList Demo for macOS.debug.xcconfig */,
+				B1B96DDDA5C6C41D1D67C041 /* Pods-StockList Demo for macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -78,7 +79,7 @@
 		8C2FC71E177835B3009F4C03 = {
 			isa = PBXGroup;
 			children = (
-				8C2FC730177835B3009F4C03 /* StockList Demo for OS X */,
+				8C2FC730177835B3009F4C03 /* StockList Demo for macOS */,
 				8C2FC729177835B3009F4C03 /* Frameworks */,
 				8C2FC728177835B3009F4C03 /* Products */,
 				01F617BEAA767AB9B2DA2FB1 /* Pods */,
@@ -88,7 +89,7 @@
 		8C2FC728177835B3009F4C03 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */,
+				8C2FC727177835B3009F4C03 /* StockList Demo for macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +99,8 @@
 			children = (
 				8C2FC72A177835B3009F4C03 /* Cocoa.framework */,
 				8C2FC72C177835B3009F4C03 /* Other Frameworks */,
-				843D7EC80F34B919A727C20C /* libPods-StockList Demo for OS X.a */,
+				BB94A285A0D06C376C2FC918 /* Pods_StockList_Demo_for_OS_X.framework */,
+				015F1A77456A5AEF16DB10D4 /* Pods_StockList_Demo_for_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,7 +115,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		8C2FC730177835B3009F4C03 /* StockList Demo for OS X */ = {
+		8C2FC730177835B3009F4C03 /* StockList Demo for macOS */ = {
 			isa = PBXGroup;
 			children = (
 				8C2FC73C177835B3009F4C03 /* AppDelegate.h */,
@@ -127,13 +129,13 @@
 				8C2FC731177835B3009F4C03 /* Supporting Files */,
 				8CDBD4AB1779A79200EC914A /* Graphics */,
 			);
-			path = "StockList Demo for OS X";
+			path = "StockList Demo for macOS";
 			sourceTree = "<group>";
 		};
 		8C2FC731177835B3009F4C03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8C2FC732177835B3009F4C03 /* StockList Demo for OS X-Info.plist */,
+				8C2FC732177835B3009F4C03 /* StockList Demo for macOS-Info.plist */,
 				8C2FC733177835B3009F4C03 /* InfoPlist.strings */,
 				8C2FC736177835B3009F4C03 /* main.m */,
 				8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */,
@@ -157,24 +159,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C2FC726177835B3009F4C03 /* StockList Demo for OS X */ = {
+		8C2FC726177835B3009F4C03 /* StockList Demo for macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */;
+			buildConfigurationList = 8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for macOS" */;
 			buildPhases = (
-				6312AB28AB951DFB01D50ECD /* 📦 Check Pods Manifest.lock */,
+				6312AB28AB951DFB01D50ECD /* [CP] Check Pods Manifest.lock */,
 				8C2FC723177835B3009F4C03 /* Sources */,
 				8C2FC724177835B3009F4C03 /* Frameworks */,
 				8C2FC725177835B3009F4C03 /* Resources */,
-				1DD147C56338CC74FAFF926D /* 📦 Embed Pods Frameworks */,
-				0949EC47131F95B764793279 /* 📦 Copy Pods Resources */,
+				1DD147C56338CC74FAFF926D /* [CP] Embed Pods Frameworks */,
+				0949EC47131F95B764793279 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "StockList Demo for OS X";
+			name = "StockList Demo for macOS";
 			productName = "StockList Demo for OS X";
-			productReference = 8C2FC727177835B3009F4C03 /* StockList Demo for OS X.app */;
+			productReference = 8C2FC727177835B3009F4C03 /* StockList Demo for macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -183,10 +185,10 @@
 		8C2FC71F177835B3009F4C03 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Weswit;
 			};
-			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */;
+			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for macOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -198,7 +200,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C2FC726177835B3009F4C03 /* StockList Demo for OS X */,
+				8C2FC726177835B3009F4C03 /* StockList Demo for macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -224,49 +226,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0949EC47131F95B764793279 /* 📦 Copy Pods Resources */ = {
+		0949EC47131F95B764793279 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for macOS/Pods-StockList Demo for macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1DD147C56338CC74FAFF926D /* 📦 Embed Pods Frameworks */ = {
+		1DD147C56338CC74FAFF926D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for OS X/Pods-StockList Demo for OS X-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StockList Demo for macOS/Pods-StockList Demo for macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6312AB28AB951DFB01D50ECD /* 📦 Check Pods Manifest.lock */ = {
+		6312AB28AB951DFB01D50ECD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -326,16 +328,22 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -344,9 +352,11 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -358,39 +368,46 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;
 		};
 		8C2FC745177835B3009F4C03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 560ACF14A3C5640C1E0B88E9 /* Pods-StockList Demo for OS X.debug.xcconfig */;
+			baseConfigurationReference = 2A39CC685570FEFA1F59998F /* Pods-StockList Demo for macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
-				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				GCC_PREFIX_HEADER = "StockList Demo for macOS/StockList Demo for macOS-Prefix.pch";
+				INFOPLIST_FILE = "StockList Demo for macOS/StockList Demo for macOS-Info.plist";
 				OTHER_CFLAGS = (
 					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.osx.stockslist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.macos.stockslist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
@@ -399,19 +416,18 @@
 		};
 		8C2FC746177835B3009F4C03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55CF009BDF354A32984233B4 /* Pods-StockList Demo for OS X.release.xcconfig */;
+			baseConfigurationReference = B1B96DDDA5C6C41D1D67C041 /* Pods-StockList Demo for macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StockList Demo for OS X/StockList Demo for OS X-Prefix.pch";
-				INFOPLIST_FILE = "StockList Demo for OS X/StockList Demo for OS X-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				GCC_PREFIX_HEADER = "StockList Demo for macOS/StockList Demo for macOS-Prefix.pch";
+				INFOPLIST_FILE = "StockList Demo for macOS/StockList Demo for macOS-Info.plist";
 				OTHER_CFLAGS = (
 					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.osx.stockslist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.macos.stockslist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
@@ -421,7 +437,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for OS X" */ = {
+		8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C2FC742177835B3009F4C03 /* Debug */,
@@ -430,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for OS X" */ = {
+		8C2FC744177835B3009F4C03 /* Build configuration list for PBXNativeTarget "StockList Demo for macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C2FC745177835B3009F4C03 /* Debug */,
