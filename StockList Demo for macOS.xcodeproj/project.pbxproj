@@ -35,7 +35,7 @@
 		8C2FC732177835B3009F4C03 /* StockList Demo for macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockList Demo for macOS-Info.plist"; sourceTree = "<group>"; };
 		8C2FC734177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C2FC736177835B3009F4C03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for OS X-Prefix.pch"; sourceTree = "<group>"; };
+		8C2FC738177835B3009F4C03 /* StockList Demo for macOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for macOS-Prefix.pch"; sourceTree = "<group>"; };
 		8C2FC73A177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8C2FC73C177835B3009F4C03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C2FC73D177835B3009F4C03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 				8C2FC732177835B3009F4C03 /* StockList Demo for macOS-Info.plist */,
 				8C2FC733177835B3009F4C03 /* InfoPlist.strings */,
 				8C2FC736177835B3009F4C03 /* main.m */,
-				8C2FC738177835B3009F4C03 /* StockList Demo for OS X-Prefix.pch */,
+				8C2FC738177835B3009F4C03 /* StockList Demo for macOS-Prefix.pch */,
 				8C2FC739177835B3009F4C03 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -187,6 +187,11 @@
 			attributes = {
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Weswit;
+				TargetAttributes = {
+					8C2FC726177835B3009F4C03 = {
+						DevelopmentTeam = 7PGFJN8WH5;
+					};
+				};
 			};
 			buildConfigurationList = 8C2FC722177835B3009F4C03 /* Build configuration list for PBXProject "StockList Demo for macOS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -399,7 +404,9 @@
 			baseConfigurationReference = 2A39CC685570FEFA1F59998F /* Pods-StockList Demo for macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PGFJN8WH5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StockList Demo for macOS/StockList Demo for macOS-Prefix.pch";
 				INFOPLIST_FILE = "StockList Demo for macOS/StockList Demo for macOS-Info.plist";
@@ -419,7 +426,9 @@
 			baseConfigurationReference = B1B96DDDA5C6C41D1D67C041 /* Pods-StockList Demo for macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 7PGFJN8WH5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StockList Demo for macOS/StockList Demo for macOS-Prefix.pch";
 				INFOPLIST_FILE = "StockList Demo for macOS/StockList Demo for macOS-Info.plist";
