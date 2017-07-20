@@ -80,6 +80,6 @@ the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-exampl
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer macOS Client Library version 2.0.0-a1 or newer.
+* Compatible with Lightstreamer macOS Client Library version 3.0.0-beta or newer.
 * For Lightstreamer Allegro (+ macOS Client API support), Presto, Vivace.
 * For a version of this example compatible with Lightstreamer macOS Client API version 1.x, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-macos/tree/latest-for-client-1.x).

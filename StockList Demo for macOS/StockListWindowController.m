@@ -370,7 +370,7 @@
     }
 }
 
-- (void) client:(nonnull LSLightstreamerClient *)client didReceiveServerError:(NSInteger)errorCode withMessage:(nullable NSString *)errorMessage {
+- (void) client:(nonnull LSLightstreamerClient *)client didReceiveServerError:(NSInteger)errorCode withMessage:(nonnull NSString *)errorMessage {
     NSLog(@"StockListWindowController: Client received server error: %ld - %@", (long) errorCode, errorMessage);
     
     _connected= NO;
