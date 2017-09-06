@@ -6,7 +6,7 @@ This project contains an example of an application for Mac that employs the [Lig
 
 ## Live Demo
 
-[![screenshot](screen_large.png)](http://demos.lightstreamer.com/StockListDemo_OSX/StockList%20Demo%20for%20OS X-uni.app.zip)<br>
+[![screenshot](screen_large.png)](http://demos.lightstreamer.com/StockListDemo_OSX/StockList%20Demo%20for%20OS%20X-uni.app.zip)<br>
 ### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/StockListDemo_OSX/StockList%20Demo%20for%20OS%20X-uni.app.zip)<br>
 (download "StockList Demo for OS X-uni.app.zip"; unzip it; launch "StockList Demo for macOS")
 
