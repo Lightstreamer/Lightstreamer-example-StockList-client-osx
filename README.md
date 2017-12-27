@@ -2,7 +2,7 @@
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-macos -->
 
-This project contains an example of an application for Mac that employs the [Lightstreamer macOS Client library](http://www.lightstreamer.com/api/ls-macos-client/latest/).
+This project contains an example of an application for Mac that employs the [Lightstreamer macOS Client library](http://www.lightstreamer.com/api/ls-macos-client/latest_4_0/).
 
 ## Live Demo
 
@@ -29,7 +29,9 @@ If you want to install a version of this demo pointing to your local Lightstream
 
 ## Build
 
-To build your own version of the demo, instead of using the one provided in the `deploy.zip` file from the Install section above, you need to install CocoaPods to handle the project dependency on the Lightstreamer macOS client library. Follow these steps:
+To build your own version of the demo, instead of using the one provided in the `deploy.zip` file from the Install section above, you need to install CocoaPods to handle the project dependency on the Lightstreamer macOS client library (see also the Lightstreamer Compatiblity Notes below).
+
+Follow these steps:
 
 * open a terminal and run the following command:
 
@@ -80,6 +82,8 @@ the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-exampl
 
 ## Lightstreamer Compatibility Notes
 
-* Compatible with Lightstreamer macOS Client Library version 3.0.0-beta or newer.
-* For Lightstreamer Allegro (+ macOS Client API support), Presto, Vivace.
+* Code compatible with Lightstreamer macOS Client Library version 3.0.0-beta or newer.
+* For Lightstreamer Allegro (+ macOS Client API support), Presto, Vivace. Server compatibility depends on the macOS Client Library in use, which is specified in the `Podfile`:
+  * By default the project uses macOS Client Library version 4.0.0, which requires a Server version 7.0 b2 or newer.
+  * Use macOS Client Library version 3.0.1 for compatibility with Server version 6.1.
 * For a version of this example compatible with Lightstreamer macOS Client API version 1.x, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-macos/tree/latest-for-client-1.x).
