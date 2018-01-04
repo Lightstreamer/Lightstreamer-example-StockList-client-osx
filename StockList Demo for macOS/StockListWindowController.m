@@ -57,11 +57,6 @@
     NSMutableDictionary *_itemData;
     
     NSMutableSet *_rowsToBeReloaded;
-    
-    BOOL _connected;
-    BOOL _polling;
-    BOOL _stalled;
-    NSString *_status;
 }
 
 
@@ -126,7 +121,7 @@
 	[infoButton setButtonType:NSOnOffButton];
 	[infoButton setBezelStyle:NSRecessedBezelStyle];
 	[infoButton setFont:[NSFont titleBarFontOfSize:13.0]];
-	[infoButton setImage:[NSImage imageNamed:@"S-logo.png"]];
+	[infoButton setImage:[NSImage imageNamed:@"S-logo"]];
 	[infoButton setTarget:self];
 	[infoButton setAction:@selector(infoButtonClicked)];
 	
@@ -138,11 +133,16 @@
 		mask |= NSViewMinXMargin;
 	else
 		mask |= NSViewMaxXMargin;
+    
+    [infoButton setAutoresizingMask:mask | NSViewMinYMargin];
+
+    NSTitlebarAccessoryViewController *accessoryController= [[NSTitlebarAccessoryViewController alloc] init];
+    accessoryController.layoutAttribute= NSLayoutAttributeRight;
+    accessoryController.view= infoButton;
+
+    [_stockListWindow addTitlebarAccessoryViewController:accessoryController];
 	
-	[infoButton setAutoresizingMask:mask | NSViewMinYMargin];
-	[[[_stockListWindow contentView] superview] addSubview:infoButton];
-	
-	// Update status
+	// Update status text
 	[self updateStatus];
 	
 	// Connect with Lightstreamer
@@ -183,9 +183,9 @@
 			case 3: {
 				double pctChange= [[item objectForKey:@"pct_change"] doubleValue];
 				if (pctChange > 0.0)
-					return [NSImage imageNamed:@"Arrow-up.png"];
+					return [NSImage imageNamed:@"Arrow-up"];
 				else if (pctChange < 0.0)
-					return [NSImage imageNamed:@"Arrow-down.png"];
+					return [NSImage imageNamed:@"Arrow-down"];
 				else
 					return nil;
 			}
@@ -222,6 +222,9 @@
 
 - (void) infoButtonClicked {
 	if (!_infoDrawer) {
+        
+        // Yes, I know drawers are deprecated, but this is a Lightstreamer demo, not an AppKit demo,
+        // and here this UI control comes in very handy. So, please bear with us.
 		_infoDrawer= [[NSDrawer alloc] initWithContentSize:CGSizeMake(INFO_WIDTH, INFO_HEIGHT) preferredEdge:3];
 		[_infoDrawer setParentWindow:_stockListWindow];
 
@@ -235,6 +238,7 @@
 		
 		[_infoDrawer setContentView:drawerView];
 		
+        // Ensure status text is up to date
 		[self updateStatus];
 	}
 	
@@ -333,35 +337,18 @@
 - (void) client:(nonnull LSLightstreamerClient *)client didChangeStatus:(nonnull NSString *)status {
     NSLog(@"StockListWindowController: Client status changed: %@", status);
     
+    // Update status text on main thread
+    [self performSelectorOnMainThread:@selector(updateStatus) withObject:nil waitUntilDone:NO];
+
     if ([status hasPrefix:@"CONNECTED:"]) {
-        _connected= YES;
-        _polling= ([status rangeOfString:@"POLLING"].location != NSNotFound);
-        _stalled= NO;
-        
-        [self updateStatus];
         
         // We subscribe, if not already subscribed. The LSClient will reconnect automatically
         // in most of the cases, so we don't need to resubscribe each time.
         if (!_subscription)
             [self subscribeItems];
         
-    } else if ([status hasPrefix:@"STALLED"]) {
-        _stalled= YES;
-        
-        [self updateStatus];
-
-    } else if ([status hasPrefix:@"DISCONNECTED:"]) {
-        _connected= NO;
-        
-        [self updateStatus];
-
-        // The client will reconnect automatically in this case.
-        
     } else if ([status isEqualToString:@"DISCONNECTED"]) {
-        _connected= NO;
-        
-        [self updateStatus];
-        
+
         // In this case the session has been closed by the server, the client
         // will not automatically reconnect. Let's prepare for a new connection.
         _subscription= nil;
@@ -373,9 +360,8 @@
 - (void) client:(nonnull LSLightstreamerClient *)client didReceiveServerError:(NSInteger)errorCode withMessage:(nonnull NSString *)errorMessage {
     NSLog(@"StockListWindowController: Client received server error: %ld - %@", (long) errorCode, errorMessage);
     
-    _connected= NO;
-    
-    [self updateStatus];
+    // Update status text on main thread
+    [self performSelectorOnMainThread:@selector(updateStatus) withObject:nil waitUntilDone:NO];
 }
 
 
@@ -479,18 +465,29 @@
 }
 
 - (void) updateStatus {
-	if (!_connected) {
-		_status= @"Not connected";
-		
-	} else if (_stalled) {
-		_status= @"Stalled";
-	
-	} else {
-		_status= [NSString stringWithFormat:@"Connected\nin %@ mode", _polling ? @"Polling" : @"Streaming"];
-	}
-
-	if (_statusField)
-		[_statusField setStringValue:_status];
+    
+    // Update connection status text
+    if ([_client.status hasPrefix:@"DISCONNECTED"]) {
+        [_statusField setStringValue:@"Not connected"];
+        
+    } else if ([_client.status hasPrefix:@"CONNECTING"]) {
+        [_statusField setStringValue:@"Connecting..."];
+        
+    } else if ([_client.status hasPrefix:@"STALLED"]) {
+        [_statusField setStringValue:@"Stalled"];
+        
+    } else if ([_client.status hasPrefix:@"CONNECTED"] &&
+               [_client.status hasSuffix:@"POLLING"]) {
+        [_statusField setStringValue:@"Connected\nin HTTP polling mode"];
+        
+    } else if ([_client.status hasPrefix:@"CONNECTED"] &&
+               [_client.status hasSuffix:@"WS-STREAMING"]) {
+        [_statusField setStringValue:@"Connected\nin WS streaming mode"];
+        
+    } else if ([_client.status hasPrefix:@"CONNECTED"] &&
+               [_client.status hasSuffix:@"HTTP-STREAMING"]) {
+        [_statusField setStringValue:@"Connected\nin HTTP streaming mode"];
+    }
 }
 
 

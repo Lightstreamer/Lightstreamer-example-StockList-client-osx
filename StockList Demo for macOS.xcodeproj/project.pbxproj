@@ -14,14 +14,10 @@
 		8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC739177835B3009F4C03 /* Credits.rtf */; };
 		8C2FC73E177835B3009F4C03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2FC73D177835B3009F4C03 /* AppDelegate.m */; };
 		8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC73F177835B3009F4C03 /* MainMenu.xib */; };
-		8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8C829E84177B48E300F1D0A5 /* App-icon.icns */; };
+		8C64AD271FFE478000DC9F6D /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C64AD261FFE478000DC9F6D /* Media.xcassets */; };
 		8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */; };
-		8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */; };
-		8CC42B35177B3350005EF21F /* S-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CC42B34177B3350005EF21F /* S-logo.png */; };
 		8CDBD4A4177995DA00EC914A /* StockListWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDBD4A3177995DA00EC914A /* StockListWindowController.m */; };
 		8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AA1779A78300EC914A /* StockListWindow.xib */; };
-		8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */; };
-		8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,16 +36,13 @@
 		8C2FC73C177835B3009F4C03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8C2FC73D177835B3009F4C03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8C2FC740177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		8C829E84177B48E300F1D0A5 /* App-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = "App-icon.icns"; path = "../App-icon.icns"; sourceTree = "<group>"; };
+		8C64AD261FFE478000DC9F6D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		8C64AD281FFE68E200DC9F6D /* StockList Demo for macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "StockList Demo for macOS.entitlements"; sourceTree = "<group>"; };
 		8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDrawerView.xib; sourceTree = "<group>"; };
-		8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lightstreamer-logo.png"; sourceTree = "<group>"; };
-		8CC42B34177B3350005EF21F /* S-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S-logo.png"; sourceTree = "<group>"; };
 		8CDBD4A2177995DA00EC914A /* StockListWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockListWindowController.h; sourceTree = "<group>"; };
 		8CDBD4A3177995DA00EC914A /* StockListWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockListWindowController.m; sourceTree = "<group>"; };
 		8CDBD4A51779988B00EC914A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8CDBD4A91779A78300EC914A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/StockListWindow.xib; sourceTree = "<group>"; };
-		8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-up.png"; sourceTree = "<group>"; };
-		8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrow-down.png"; sourceTree = "<group>"; };
 		B1B96DDDA5C6C41D1D67C041 /* Pods-StockList Demo for macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockList Demo for macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-StockList Demo for macOS/Pods-StockList Demo for macOS.release.xcconfig"; sourceTree = "<group>"; };
 		BB94A285A0D06C376C2FC918 /* Pods_StockList_Demo_for_OS_X.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockList_Demo_for_OS_X.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +111,7 @@
 		8C2FC730177835B3009F4C03 /* StockList Demo for macOS */ = {
 			isa = PBXGroup;
 			children = (
+				8C64AD281FFE68E200DC9F6D /* StockList Demo for macOS.entitlements */,
 				8C2FC73C177835B3009F4C03 /* AppDelegate.h */,
 				8C2FC73D177835B3009F4C03 /* AppDelegate.m */,
 				8CDBD4A51779988B00EC914A /* Constants.h */,
@@ -126,8 +120,8 @@
 				8CDBD4AA1779A78300EC914A /* StockListWindow.xib */,
 				8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */,
 				8C2FC73F177835B3009F4C03 /* MainMenu.xib */,
+				8C64AD261FFE478000DC9F6D /* Media.xcassets */,
 				8C2FC731177835B3009F4C03 /* Supporting Files */,
-				8CDBD4AB1779A79200EC914A /* Graphics */,
 			);
 			path = "StockList Demo for macOS";
 			sourceTree = "<group>";
@@ -142,18 +136,6 @@
 				8C2FC739177835B3009F4C03 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8CDBD4AB1779A79200EC914A /* Graphics */ = {
-			isa = PBXGroup;
-			children = (
-				8C829E84177B48E300F1D0A5 /* App-icon.icns */,
-				8CC42B34177B3350005EF21F /* S-logo.png */,
-				8CC42B32177B2D6D005EF21F /* Lightstreamer-logo.png */,
-				8CDBD4AC1779A7CA00EC914A /* Arrow-up.png */,
-				8CDBD4AD1779A7CA00EC914A /* Arrow-down.png */,
-			);
-			name = Graphics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +172,11 @@
 				TargetAttributes = {
 					8C2FC726177835B3009F4C03 = {
 						DevelopmentTeam = 7PGFJN8WH5;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -219,12 +206,8 @@
 				8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */,
 				8C2FC741177835B3009F4C03 /* MainMenu.xib in Resources */,
 				8CDBD4A81779A78300EC914A /* StockListWindow.xib in Resources */,
-				8CDBD4AE1779A7CA00EC914A /* Arrow-up.png in Resources */,
-				8CDBD4AF1779A7CA00EC914A /* Arrow-down.png in Resources */,
+				8C64AD271FFE478000DC9F6D /* Media.xcassets in Resources */,
 				8CC42B31177B29C6005EF21F /* InfoDrawerView.xib in Resources */,
-				8CC42B33177B2D6D005EF21F /* Lightstreamer-logo.png in Resources */,
-				8CC42B35177B3350005EF21F /* S-logo.png in Resources */,
-				8C829E85177B48E300F1D0A5 /* App-icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +404,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A39CC685570FEFA1F59998F /* Pods-StockList Demo for macOS.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "StockList Demo for macOS/StockList Demo for macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7PGFJN8WH5;
@@ -443,7 +428,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1B96DDDA5C6C41D1D67C041 /* Pods-StockList Demo for macOS.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = "StockList Demo for macOS/StockList Demo for macOS.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 7PGFJN8WH5;
