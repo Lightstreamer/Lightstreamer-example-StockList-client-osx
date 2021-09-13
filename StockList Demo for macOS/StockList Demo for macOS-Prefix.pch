@@ -3,6 +3,9 @@
 //
 
 #ifdef __OBJC__
+    // Added by Swiftify: import the Swift Bridging Header from the .pch file
+    // to make it accessible from all Objective-C source files.
+    #import "StockList_Demo_for_macOS-Swift.h"
 	#import <Cocoa/Cocoa.h>
 	#import <Lightstreamer_macOS_Client/Lightstreamer_macOS_Client.h>
 #endif
