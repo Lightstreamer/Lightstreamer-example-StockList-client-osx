@@ -23,29 +23,26 @@ import Cocoa
 class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate {
     @IBOutlet var stockListWindow: NSWindow!
     @IBOutlet var stockListTable: NSTableView!
-    @IBOutlet var statusField: NSTextField!
+    @IBOutlet var statusField: NSTextField?
     private var infoDrawer: NSDrawer?
-    private var itemNames: [AnyHashable]?
-    private var fieldNames: [AnyHashable]?
+    private let itemNames = ITEMS
+    private let fieldNames = FIELDS
     private var client: LSLightstreamerClient?
     private var subscription: LSSubscription?
-    private var itemUpdated: [AnyHashable : Any]?
-    private var itemData: [AnyHashable : Any]?
-    private var rowsToBeReloaded: Set<AnyHashable>?
+    private var itemUpdated: [Int : [String : Bool]] = [Int : [String : Bool]](minimumCapacity: NUMBER_OF_ITEMS)
+    private var itemData: [Int : [String : String?]] = [Int : [String : String?]](minimumCapacity: NUMBER_OF_ITEMS)
+    private var rowsToBeReloaded: Set<UInt> = Set()
+    let lockQueue = DispatchQueue(label: "com.lightstreamer.StockListWindowController")
 
     // MARK: -
     // MARK: Initialization
+    
+    override var windowNibName: String! {
+        return "StockListWindow"
+    }
 
-    override init() {
-        super.init(windowNibName: "StockListWindow")
-        // Initialization
-        itemNames = [ITEMS]
-        fieldNames = [FIELDS]
-
-        itemData = [AnyHashable : Any](minimumCapacity: NUMBER_OF_ITEMS)
-        itemUpdated = [AnyHashable : Any](minimumCapacity: NUMBER_OF_ITEMS)
-
-        rowsToBeReloaded = Set<AnyHashable>() // capacity: NUMBER_OF_ITEMS
+    init() {
+        super.init(window: nil)
     }
 
     // MARK: -
@@ -74,7 +71,7 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
 
         // Add title bar button for info drawer
         let infoButton = NSButton(frame: CGRect(x: 0.0, y: 0.0, width: 28.0, height: 28.0))
-        infoButton.setButtonType(NSOnOffButton)
+        infoButton.setButtonType(.onOff)
         infoButton.bezelStyle = .recessed
         infoButton.font = NSFont.titleBarFont(ofSize: 13.0)
         infoButton.image = NSImage(named: "S-logo")
@@ -84,16 +81,14 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
         let x: Float = 765.0
         infoButton.frame = NSRect(x: CGFloat(x), y: stockListWindow.contentView?.frame.size.height ?? 0.0, width: infoButton.frame.size.width, height: CGFloat(heightOfTitleBar))
 
-        var mask = 0
+        var mask: UInt = 0
         if CGFloat(x) > stockListWindow.frame.size.width / 2.0 {
             mask |= NSView.AutoresizingMask.minXMargin.rawValue
         } else {
             mask |= NSView.AutoresizingMask.maxXMargin.rawValue
         }
 
-        if let margin = NSView.AutoresizingMask(rawValue: mask | NSView.AutoresizingMask.minYMargin.rawValue) {
-            infoButton.autoresizingMask = margin
-        }
+        infoButton.autoresizingMask = NSView.AutoresizingMask(rawValue: mask | NSView.AutoresizingMask.minYMargin.rawValue)
 
         let accessoryController = NSTitlebarAccessoryViewController()
         accessoryController.layoutAttribute = .right
@@ -116,29 +111,28 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     }
 
     func tableView(_ aTableView: NSTableView, objectValueFor aTableColumn: NSTableColumn?, row rowIndex: Int) -> Any? {
-        var item: [AnyHashable : Any]? = nil
-        var itemUpdated: [AnyHashable : Any]? = nil
+        var item: [String : String?]?
+        var itemUpdated: [String : Bool]?
 
-        let lockQueue = DispatchQueue(label: "itemData")
         lockQueue.sync {
-            item = itemData?[NSNumber(value: rowIndex)] as? [AnyHashable : Any]
-            itemUpdated = self.itemUpdated?[NSNumber(value: rowIndex)] as? [AnyHashable : Any]
-
-            if item == nil || itemUpdated == nil {
-                return nil
-            }
+            item = itemData[rowIndex]
+            itemUpdated = self.itemUpdated[rowIndex]
+        }
+        
+        if item == nil || itemUpdated == nil {
+            return nil
         }
 
         if let item = item {
-            switch (aTableColumn?.identifier as? NSNumber).intValue ?? 0 {
+            switch Int(aTableColumn?.identifier.rawValue ?? "0") ?? 0 {
             case 0:
-                return item["stock_name"]
+                return item["stock_name"] as Any?
             case 1:
-                return item["last_price"]
+                return item["last_price"] as Any?
             case 2:
-                return item["time"]
+                return item["time"] as Any?
             case 3:
-                let pctChange = (item["pct_change"] as? NSNumber)?.doubleValue ?? 0.0
+                let pctChange = Double((item["pct_change"] ?? "0") ?? "0") ?? 0.0
                 if pctChange > 0.0 {
                     return NSImage(named: "Arrow-up")
                 } else if pctChange < 0.0 {
@@ -147,22 +141,22 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
                     return nil
                 }
             case 4:
-                if let object = item["pct_change"] {
+                if let object = item["pct_change"] ?? "0" {
                     return String(format: "%@%%", object)
                 }
                 return nil
             case 5:
-                return item["bid"]
+                return item["bid"] as Any?
             case 6:
-                return item["ask"]
+                return item["ask"] as Any?
             case 7:
-                return item["min"]
+                return item["min"] as Any?
             case 8:
-                return item["max"]
+                return item["max"] as Any?
             case 9:
-                return item["ref_price"]
+                return item["ref_price"] as Any?
             case 10:
-                return item["open_price"]
+                return item["open_price"]  as Any?
             default:
                 break
             }
@@ -184,7 +178,7 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
             }
             infoDrawer?.parentWindow = stockListWindow
 
-            var views: [AnyHashable]? = nil
+            var views: NSArray? = nil
             Bundle.main.loadNibNamed("InfoDrawerView", owner: self, topLevelObjects: &views)
 
             // Find the view (order of top level objects may be scrambled)
@@ -206,21 +200,20 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     // MARK: NSTableViewDelegate methods
 
     func tableView(_ aTableView: NSTableView, willDisplayCell aCell: Any, for aTableColumn: NSTableColumn?, row rowIndex: Int) {
-        var item: [AnyHashable : Any]? = nil
-        var itemUpdated: [AnyHashable : Any]? = nil
+        var item: [String: String?]?
+        var itemUpdated: [String : Bool]?
 
-        let lockQueue = DispatchQueue(label: "itemData")
         lockQueue.sync {
-            item = itemData?[NSNumber(value: rowIndex)] as? [AnyHashable : Any]
-            itemUpdated = self.itemUpdated?[NSNumber(value: rowIndex)] as? [AnyHashable : Any]
-
-            if item == nil || itemUpdated == nil {
-                return
-            }
+            item = itemData[rowIndex]
+            itemUpdated = self.itemUpdated[rowIndex]
+        }
+        
+        if item == nil || itemUpdated == nil {
+            return
         }
 
         let cell = aCell as? NSTextFieldCell
-        switch (aTableColumn?.identifier as? NSNumber).intValue ?? 0 {
+        switch Int(aTableColumn?.identifier.rawValue ?? "0") ?? 0 {
         case 3:
             // Cell is not a NSTextFieldCell, leave the color as it is
             break
@@ -230,9 +223,9 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
 
             // No "break", continue with highlight code
         default:
-            let fields = [FIELDS]
-            let field = fields[(aTableColumn?.identifier as? NSNumber).intValue ?? 0] as? String
-            let updated = (itemUpdated?[field ?? ""] as? NSNumber)?.boolValue ?? false
+            let fields = FIELDS
+            let field = fields[Int(aTableColumn?.identifier.rawValue ?? "0") ?? 0]
+            let updated = itemUpdated?[field] ?? false
 
             if updated {
                 let colorName = item?["color"] as? String
@@ -272,7 +265,7 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
         subscription?.requestedMaxFrequency = "1.0"
 
         subscription?.addDelegate(self)
-        client?.subscribe(subscription)
+        client?.subscribe(subscription!)
 
         print("StockListWindowController: Table subscribed")
     }
@@ -319,58 +312,55 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
 
     func subscription(_ subscription: LSSubscription, didUpdateItem itemUpdate: LSItemUpdate) {
         let itemPosition = itemUpdate.itemPos
-        var item: [AnyHashable : Any]? = nil
-        var itemUpdated: [AnyHashable : Any]? = nil
+        var item: [String : String?]?
+        var itemUpdated: [String : Bool]?
 
-        let lockQueue = DispatchQueue(label: "itemData")
         lockQueue.sync {
-            item = itemData?[NSNumber(value: UInt((itemPosition - 1)))] as? [AnyHashable : Any]
+            item = itemData[Int(itemPosition) - 1]
             if item == nil {
-                item = [AnyHashable : Any](minimumCapacity: NUMBER_OF_FIELDS)
-                itemData?[NSNumber(value: UInt((itemPosition - 1)))] = item
+                item = [String : String?](minimumCapacity: NUMBER_OF_FIELDS)
+                itemData[Int(itemPosition) - 1] = item
             }
 
-            itemUpdated = self.itemUpdated?[NSNumber(value: UInt((itemPosition - 1)))] as? [AnyHashable : Any]
+            itemUpdated = self.itemUpdated[Int(itemPosition) - 1]
             if itemUpdated == nil {
-                itemUpdated = [AnyHashable : Any](minimumCapacity: NUMBER_OF_FIELDS)
-                self.itemUpdated?[NSNumber(value: UInt((itemPosition - 1)))] = itemUpdated
+                itemUpdated = [String : Bool](minimumCapacity: NUMBER_OF_FIELDS)
+                self.itemUpdated[Int(itemPosition) - 1] = itemUpdated
             }
         }
 
         var previousLastPrice = 0.0
-        for fieldName in fieldNames ?? [] {
-            guard let fieldName = fieldName as? String else {
-                continue
-            }
+        for fieldName in fieldNames {
             let value = itemUpdate.value(withFieldName: fieldName)
 
             // Save previous last price to choose blick color later
             if fieldName == "last_price" {
-                previousLastPrice = (item?[fieldName] as? NSNumber)?.doubleValue ?? 0.0
+                previousLastPrice = Double((item?[fieldName] ?? "0") ?? "0") ?? 0.0
             }
 
             if value != "" {
                 item?[fieldName] = value
             } else {
-                item?[fieldName] = NSNull()
+                item?[fieldName] = nil
             }
 
             if itemUpdate.isValueChanged(withFieldName: fieldName) {
-                itemUpdated?[fieldName] = NSNumber(value: true)
+                itemUpdated?[fieldName] = true
             }
         }
 
         // Check variation and store appropriate color
-        let currentLastPrice = itemUpdate.value(withFieldName: "last_price").doubleValue
+        let currentLastPrice = Double(itemUpdate.value(withFieldName: "last_price") ?? "0") ?? 0
         if currentLastPrice >= previousLastPrice {
             item?["color"] = "green"
         } else {
             item?["color"] = "orange"
         }
 
-        let lockQueue = DispatchQueue(label: "rowsToBeReloaded")
         lockQueue.sync {
-            rowsToBeReloaded?.insert(NSNumber(value: UInt((itemPosition - 1))))
+            rowsToBeReloaded.insert(itemPosition - 1)
+            self.itemData[Int(itemPosition) - 1] = item
+            self.itemUpdated[Int(itemPosition) - 1] = itemUpdated
         }
 
         performSelector(onMainThread: #selector(reloadTableRows), with: nil, waitUntilDone: false)
@@ -380,56 +370,50 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     // MARK: Internals
 
     @objc func reloadTableRows() {
-        var rowsToBeReloaded: Set<AnyHashable>? = nil
+        var rowsToBeReloaded: Set<UInt>! = nil
 
-        let lockQueue = DispatchQueue(label: "self.rowsToBeReloaded")
         lockQueue.sync {
-            rowsToBeReloaded = Set<AnyHashable>() + self.rowsToBeReloaded
-            self.rowsToBeReloaded?.removeAll()
+            rowsToBeReloaded = self.rowsToBeReloaded
+            self.rowsToBeReloaded.removeAll()
         }
 
         let indexSet = NSMutableIndexSet()
-        for index in rowsToBeReloaded ?? [] {
-            guard let index = index as? NSNumber else {
-                continue
-            }
-            indexSet.add(index.intValue)
+        for index in rowsToBeReloaded {
+            indexSet.add(Int(index))
         }
 
         // Reload related table cells, willDisplayCell event will do highlighting
         stockListTable.reloadData(forRowIndexes: indexSet as IndexSet, columnIndexes: NSIndexSet(indexesIn: NSRange(location: 0, length: NUMBER_OF_FIELDS)) as IndexSet)
 
-        perform(Selector("unhighlight:"), with: rowsToBeReloaded, afterDelay: FLASH_DURATION)
+        perform(#selector(unhighlight), with: rowsToBeReloaded, afterDelay: FLASH_DURATION)
     }
 
-    @objc func unhighlight(_ rowsToBeUnhighlighted: Set<AnyHashable>?) {
-        let fields = [FIELDS]
+    @objc func unhighlight(_ rowsToBeUnhighlighted: Set<UInt>?) {
+        let fields = FIELDS
 
         for index in rowsToBeUnhighlighted ?? [] {
-            guard let index = index as? NSNumber else {
-                continue
-            }
-            var itemUpdated: [AnyHashable : Any]? = nil
+            var itemUpdated: [String : Bool]?
 
-            let lockQueue = DispatchQueue(label: "itemData")
             lockQueue.sync {
-                itemUpdated = self.itemUpdated?[index] as? [AnyHashable : Any]
-                if itemUpdated == nil {
-                    continue
-                }
+                itemUpdated = self.itemUpdated[Int(index)]
+            }
+            
+            if itemUpdated == nil {
+                continue
             }
 
             for i in 0..<NUMBER_OF_FIELDS {
-                itemUpdated?[fields[i]] = NSNumber(value: false)
+                itemUpdated?[fields[i]] = false
+            }
+            
+            lockQueue.sync {
+                self.itemUpdated[Int(index)] = itemUpdated
             }
         }
 
         let indexSet = NSMutableIndexSet()
         for index in rowsToBeUnhighlighted ?? [] {
-            guard let index = index as? NSNumber else {
-                continue
-            }
-            indexSet.add(index.intValue)
+            indexSet.add(Int(index))
         }
 
         // Reload related table cells, willDisplayCell event will do unhighlighting
@@ -440,17 +424,17 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
 
         // Update connection status text
         if client?.status.hasPrefix("DISCONNECTED") ?? false {
-            statusField.stringValue = "Not connected"
+            statusField?.stringValue = "Not connected"
         } else if client?.status.hasPrefix("CONNECTING") ?? false {
-            statusField.stringValue = "Connecting..."
+            statusField?.stringValue = "Connecting..."
         } else if client?.status.hasPrefix("STALLED") ?? false {
-            statusField.stringValue = "Stalled"
+            statusField?.stringValue = "Stalled"
         } else if client?.status.hasPrefix("CONNECTED") ?? false && client?.status.hasSuffix("POLLING") ?? false {
-            statusField.stringValue = "Connected\nin HTTP polling mode"
+            statusField?.stringValue = "Connected\nin HTTP polling mode"
         } else if client?.status.hasPrefix("CONNECTED") ?? false && client?.status.hasSuffix("WS-STREAMING") ?? false {
-            statusField.stringValue = "Connected\nin WS streaming mode"
+            statusField?.stringValue = "Connected\nin WS streaming mode"
         } else if client?.status.hasPrefix("CONNECTED") ?? false && client?.status.hasSuffix("HTTP-STREAMING") ?? false {
-            statusField.stringValue = "Connected\nin HTTP streaming mode"
+            statusField?.stringValue = "Connected\nin HTTP streaming mode"
         }
     }
 
