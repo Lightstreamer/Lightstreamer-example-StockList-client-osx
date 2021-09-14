@@ -32,7 +32,7 @@ class StockListWindowController: NSWindowController, ClientDelegate, Subscriptio
     private var subscription: Subscription?
     private var itemUpdated: [Int : [String : Bool]] = [Int : [String : Bool]](minimumCapacity: NUMBER_OF_ITEMS)
     private var itemData: [Int : [String : String?]] = [Int : [String : String?]](minimumCapacity: NUMBER_OF_ITEMS)
-    private var rowsToBeReloaded: Set<UInt> = Set()
+    private var rowsToBeReloaded: Set<Int> = Set()
     let lockQueue = DispatchQueue(label: "com.lightstreamer.StockListWindowController")
 
     // MARK: -
@@ -332,16 +332,16 @@ class StockListWindowController: NSWindowController, ClientDelegate, Subscriptio
         var itemUpdated: [String : Bool]?
 
         lockQueue.sync {
-            item = itemData[Int(itemPosition) - 1]
+            item = itemData[itemPosition - 1]
             if item == nil {
                 item = [String : String?](minimumCapacity: NUMBER_OF_FIELDS)
-                itemData[Int(itemPosition) - 1] = item
+                itemData[itemPosition - 1] = item
             }
 
-            itemUpdated = self.itemUpdated[Int(itemPosition) - 1]
+            itemUpdated = self.itemUpdated[itemPosition - 1]
             if itemUpdated == nil {
                 itemUpdated = [String : Bool](minimumCapacity: NUMBER_OF_FIELDS)
-                self.itemUpdated[Int(itemPosition) - 1] = itemUpdated
+                self.itemUpdated[itemPosition - 1] = itemUpdated
             }
         }
 
@@ -374,9 +374,9 @@ class StockListWindowController: NSWindowController, ClientDelegate, Subscriptio
         }
 
         lockQueue.sync {
-            rowsToBeReloaded.insert(UInt(itemPosition - 1))
-            self.itemData[Int(itemPosition) - 1] = item
-            self.itemUpdated[Int(itemPosition) - 1] = itemUpdated
+            rowsToBeReloaded.insert(itemPosition - 1)
+            self.itemData[itemPosition - 1] = item
+            self.itemUpdated[itemPosition - 1] = itemUpdated
         }
 
         performSelector(onMainThread: #selector(reloadTableRows), with: nil, waitUntilDone: false)
@@ -386,7 +386,7 @@ class StockListWindowController: NSWindowController, ClientDelegate, Subscriptio
     // MARK: Internals
 
     @objc func reloadTableRows() {
-        var rowsToBeReloaded: Set<UInt>! = nil
+        var rowsToBeReloaded: Set<Int>! = nil
 
         lockQueue.sync {
             rowsToBeReloaded = self.rowsToBeReloaded
