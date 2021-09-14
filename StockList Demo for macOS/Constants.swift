@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Cocoa
 
 let NUMBER_OF_ITEMS = 30
 let NUMBER_OF_FIELDS = 11

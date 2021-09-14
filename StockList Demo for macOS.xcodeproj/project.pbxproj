@@ -31,7 +31,6 @@
 		8C2FC72F177835B3009F4C03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8C2FC732177835B3009F4C03 /* StockList Demo for macOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StockList Demo for macOS-Info.plist"; sourceTree = "<group>"; };
 		8C2FC734177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8C2FC738177835B3009F4C03 /* StockList Demo for macOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for macOS-Prefix.pch"; sourceTree = "<group>"; };
 		8C2FC73A177835B3009F4C03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8C2FC73D177835B3009F4C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C64AD261FFE478000DC9F6D /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 		8C9B1BCD2463213800D8D2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/StockListWindow.xib; sourceTree = "<group>"; };
 		8C9B1BCE2463213800D8D2C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8CC42B30177B29C6005EF21F /* InfoDrawerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoDrawerView.xib; sourceTree = "<group>"; };
-		DDCA41888E198473D6542A8E /* StockList Demo for macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StockList Demo for macOS-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				8C2FC730177835B3009F4C03 /* StockList Demo for macOS */,
 				8C2FC729177835B3009F4C03 /* Frameworks */,
 				8C2FC728177835B3009F4C03 /* Products */,
-				DDCA41888E198473D6542A8E /* StockList Demo for macOS-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +111,6 @@
 			children = (
 				8C2FC732177835B3009F4C03 /* StockList Demo for macOS-Info.plist */,
 				8C2FC733177835B3009F4C03 /* InfoPlist.strings */,
-				8C2FC738177835B3009F4C03 /* StockList Demo for macOS-Prefix.pch */,
 				8C2FC739177835B3009F4C03 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -362,7 +358,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.macos.stockslist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "StockList Demo for macOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				USE_LOCALHOST = 0;
@@ -397,7 +392,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lightstreamer.macos.stockslist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "StockList Demo for macOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				USE_LOCALHOST = 0;
 				WRAPPER_EXTENSION = app;
