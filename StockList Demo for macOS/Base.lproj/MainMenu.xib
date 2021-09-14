@@ -79,7 +79,7 @@
                 </menuItem>
             </items>
         </menu>
-        <customObject id="494" customClass="AppDelegate"/>
+        <customObject id="494" customClass="AppDelegate" customModule="StockList_Demo_for_macOS" customModuleProvider="target"/>
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
 </document>
