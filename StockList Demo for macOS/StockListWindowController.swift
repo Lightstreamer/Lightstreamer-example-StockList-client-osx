@@ -222,7 +222,7 @@ class StockListWindowController: NSWindowController, ClientDelegate, Subscriptio
             let value = cell?.doubleValue ?? 0.0
             cell?.textColor = (value >= 0.0) ? DK_GREEN_COLOR : RED_COLOR
 
-            // No "break", continue with highlight code
+            fallthrough
         default:
             let fields = FIELDS
             let field = fields[Int(aTableColumn?.identifier.rawValue ?? "0") ?? 0]
