@@ -19,16 +19,17 @@
 //
 
 import Cocoa
+import LightstreamerClient
 
-class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate {
+class StockListWindowController: NSWindowController, ClientDelegate, SubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate {
     @IBOutlet var stockListWindow: NSWindow!
     @IBOutlet var stockListTable: NSTableView!
     @IBOutlet var statusField: NSTextField?
     private var infoDrawer: NSDrawer?
     private let itemNames = ITEMS
     private let fieldNames = FIELDS
-    private var client: LSLightstreamerClient?
-    private var subscription: LSSubscription?
+    private var client: LightstreamerClient?
+    private var subscription: Subscription?
     private var itemUpdated: [Int : [String : Bool]] = [Int : [String : Bool]](minimumCapacity: NUMBER_OF_ITEMS)
     private var itemData: [Int : [String : String?]] = [Int : [String : String?]](minimumCapacity: NUMBER_OF_ITEMS)
     private var rowsToBeReloaded: Set<UInt> = Set()
@@ -248,7 +249,7 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     // MARK: Lighstreamer management
 
     @objc func connectToLightstreamer() {
-        client = LSLightstreamerClient(serverAddress: PUSH_SERVER_URL, adapterSet: ADAPTER_SET)
+        client = LightstreamerClient(serverAddress: PUSH_SERVER_URL, adapterSet: ADAPTER_SET)
 
         print("StockListViewController: Connecting to Lightstreamer...")
 
@@ -259,10 +260,10 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     func subscribeItems() {
         print("StockListWindowController: Subscribing table...")
 
-        subscription = LSSubscription(subscriptionMode: "MERGE", items: itemNames, fields: fieldNames)
+        subscription = Subscription(subscriptionMode: .MERGE, items: itemNames, fields: fieldNames)
         subscription?.dataAdapter = DATA_ADAPTER
-        subscription?.requestedSnapshot = "yes"
-        subscription?.requestedMaxFrequency = "1.0"
+        subscription?.requestedSnapshot = .yes
+        subscription?.requestedMaxFrequency = .limited(1.0)
 
         subscription?.addDelegate(self)
         client?.subscribe(subscription!)
@@ -272,25 +273,28 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
 
     // MARK: -
     // MARK: Methods of LSClientDelegate
-
-    func client(_ client: LSLightstreamerClient, didChangeProperty property: String) {
+    
+    func clientDidRemoveDelegate(_ client: LightstreamerClient) {}
+    func clientDidAddDelegate(_ client: LightstreamerClient) {}
+    
+    func client(_ client: LightstreamerClient, didChangeProperty property: String) {
         print("StockListWindowController: Client property changed: \(property)")
     }
 
-    func client(_ client: LSLightstreamerClient, didChangeStatus status: String) {
+    func client(_ client: LightstreamerClient, didChangeStatus status: LightstreamerClient.Status) {
         print("StockListWindowController: Client status changed: \(status)")
 
         // Update status text on main thread
         performSelector(onMainThread: #selector(updateStatus), with: nil, waitUntilDone: false)
 
-        if status.hasPrefix("CONNECTED:") {
+        if status.rawValue.hasPrefix("CONNECTED:") {
 
             // We subscribe, if not already subscribed. The LSClient will reconnect automatically
             // in most of the cases, so we don't need to resubscribe each time.
             if subscription == nil {
                 subscribeItems()
             }
-        } else if status == "DISCONNECTED" {
+        } else if status.rawValue == "DISCONNECTED" {
 
             // In this case the session has been closed by the server, the client
             // will not automatically reconnect. Let's prepare for a new connection.
@@ -300,7 +304,7 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
         }
     }
 
-    func client(_ client: LSLightstreamerClient, didReceiveServerError errorCode: Int, withMessage errorMessage: String) {
+    func client(_ client: LightstreamerClient, didReceiveServerError errorCode: Int, withMessage errorMessage: String) {
         print(String(format: "StockListWindowController: Client received server error: %ld - %@", errorCode, errorMessage))
 
         // Update status text on main thread
@@ -308,9 +312,21 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     }
 
     // MARK: -
-    // MARK: Methods of LSSubscriptionDelegate
+    // MARK: Methods of SubscriptionDelegate
+    
+    func subscription(_ subscription: Subscription, didClearSnapshotForItemName itemName: String?, itemPos: UInt) {}
+    func subscription(_ subscription: Subscription, didLoseUpdates lostUpdates: UInt, forCommandSecondLevelItemWithKey key: String) {}
+    func subscription(_ subscription: Subscription, didFailWithErrorCode code: Int, message: String?, forCommandSecondLevelItemWithKey key: String) {}
+    func subscription(_ subscription: Subscription, didEndSnapshotForItemName itemName: String?, itemPos: UInt) {}
+    func subscription(_ subscription: Subscription, didLoseUpdates lostUpdates: UInt, forItemName itemName: String?, itemPos: UInt) {}
+    func subscriptionDidRemoveDelegate(_ subscription: Subscription) {}
+    func subscriptionDidAddDelegate(_ subscription: Subscription) {}
+    func subscriptionDidSubscribe(_ subscription: Subscription) {}
+    func subscription(_ subscription: Subscription, didFailWithErrorCode code: Int, message: String?) {}
+    func subscriptionDidUnsubscribe(_ subscription: Subscription) {}
+    func subscription(_ subscription: Subscription, didReceiveRealFrequency frequency: RealMaxFrequency?) {}
 
-    func subscription(_ subscription: LSSubscription, didUpdateItem itemUpdate: LSItemUpdate) {
+    func subscription(_ subscription: Subscription, didUpdateItem itemUpdate: ItemUpdate) {
         let itemPosition = itemUpdate.itemPos
         var item: [String : String?]?
         var itemUpdated: [String : Bool]?
@@ -358,7 +374,7 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
         }
 
         lockQueue.sync {
-            rowsToBeReloaded.insert(itemPosition - 1)
+            rowsToBeReloaded.insert(UInt(itemPosition - 1))
             self.itemData[Int(itemPosition) - 1] = item
             self.itemUpdated[Int(itemPosition) - 1] = itemUpdated
         }
@@ -423,17 +439,17 @@ class StockListWindowController: NSWindowController, LSClientDelegate, LSSubscri
     @objc func updateStatus() {
 
         // Update connection status text
-        if client?.status.hasPrefix("DISCONNECTED") ?? false {
+        if client?.status.rawValue.hasPrefix("DISCONNECTED") ?? false {
             statusField?.stringValue = "Not connected"
-        } else if client?.status.hasPrefix("CONNECTING") ?? false {
+        } else if client?.status.rawValue.hasPrefix("CONNECTING") ?? false {
             statusField?.stringValue = "Connecting..."
-        } else if client?.status.hasPrefix("STALLED") ?? false {
+        } else if client?.status.rawValue.hasPrefix("STALLED") ?? false {
             statusField?.stringValue = "Stalled"
-        } else if client?.status.hasPrefix("CONNECTED") ?? false && client?.status.hasSuffix("POLLING") ?? false {
+        } else if client?.status.rawValue.hasPrefix("CONNECTED") ?? false && client?.status.rawValue.hasSuffix("POLLING") ?? false {
             statusField?.stringValue = "Connected\nin HTTP polling mode"
-        } else if client?.status.hasPrefix("CONNECTED") ?? false && client?.status.hasSuffix("WS-STREAMING") ?? false {
+        } else if client?.status.rawValue.hasPrefix("CONNECTED") ?? false && client?.status.rawValue.hasSuffix("WS-STREAMING") ?? false {
             statusField?.stringValue = "Connected\nin WS streaming mode"
-        } else if client?.status.hasPrefix("CONNECTED") ?? false && client?.status.hasSuffix("HTTP-STREAMING") ?? false {
+        } else if client?.status.rawValue.hasPrefix("CONNECTED") ?? false && client?.status.rawValue.hasSuffix("HTTP-STREAMING") ?? false {
             statusField?.stringValue = "Connected\nin HTTP streaming mode"
         }
     }
