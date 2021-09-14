@@ -8,7 +8,6 @@
 
 import Foundation
 
-//  Converted to Swift 5.4 by Swiftify v5.4.25812 - https://swiftify.com/
 let NUMBER_OF_ITEMS = 30
 let NUMBER_OF_FIELDS = 11
 

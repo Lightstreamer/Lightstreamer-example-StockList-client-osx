@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		578EFE8126F07706003207E3 /* StockListWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578EFE8026F07706003207E3 /* StockListWindowController.swift */; };
-		578EFE8326F077A8003207E3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578EFE8226F077A8003207E3 /* Utils.swift */; };
+		578EFE8326F077A8003207E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578EFE8226F077A8003207E3 /* Constants.swift */; };
 		578EFE8526F0A679003207E3 /* Lightstreamer_macOS_Client in Frameworks */ = {isa = PBXBuildFile; productRef = 96A3B252259B8903002CB79E /* Lightstreamer_macOS_Client */; };
 		8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2FC72A177835B3009F4C03 /* Cocoa.framework */; };
 		8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC733177835B3009F4C03 /* InfoPlist.strings */; };
@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		578EFE8026F07706003207E3 /* StockListWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListWindowController.swift; sourceTree = "<group>"; };
-		578EFE8226F077A8003207E3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		578EFE8226F077A8003207E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8C2FC727177835B3009F4C03 /* StockList Demo for macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockList Demo for macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C2FC72A177835B3009F4C03 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8C2FC72D177835B3009F4C03 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -102,7 +102,7 @@
 				8C2FC73F177835B3009F4C03 /* MainMenu.xib */,
 				8C64AD261FFE478000DC9F6D /* Media.xcassets */,
 				8C2FC731177835B3009F4C03 /* Supporting Files */,
-				578EFE8226F077A8003207E3 /* Utils.swift */,
+				578EFE8226F077A8003207E3 /* Constants.swift */,
 			);
 			path = "StockList Demo for macOS";
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578EFE8326F077A8003207E3 /* Utils.swift in Sources */,
+				578EFE8326F077A8003207E3 /* Constants.swift in Sources */,
 				8C2FC73E177835B3009F4C03 /* AppDelegate.swift in Sources */,
 				578EFE8126F07706003207E3 /* StockListWindowController.swift in Sources */,
 			);
