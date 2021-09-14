@@ -18,7 +18,6 @@
 //
 
 #import "AppDelegate.h"
-#import "StockListWindowController.h"
 
 
 @implementation AppDelegate
