@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		578EFE8126F07706003207E3 /* StockListWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578EFE8026F07706003207E3 /* StockListWindowController.swift */; };
 		578EFE8326F077A8003207E3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578EFE8226F077A8003207E3 /* Constants.swift */; };
-		578EFE8826F0AAF3003207E3 /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = 578EFE8726F0AAF3003207E3 /* LightstreamerClient */; };
+		57971FC626F4D0EC00058B04 /* LightstreamerClient in Frameworks */ = {isa = PBXBuildFile; productRef = 57971FC526F4D0EC00058B04 /* LightstreamerClient */; };
 		8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C2FC72A177835B3009F4C03 /* Cocoa.framework */; };
 		8C2FC735177835B3009F4C03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC733177835B3009F4C03 /* InfoPlist.strings */; };
 		8C2FC73B177835B3009F4C03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8C2FC739177835B3009F4C03 /* Credits.rtf */; };
@@ -23,7 +23,6 @@
 /* Begin PBXFileReference section */
 		578EFE8026F07706003207E3 /* StockListWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListWindowController.swift; sourceTree = "<group>"; };
 		578EFE8226F077A8003207E3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		578EFE8626F0AAAE003207E3 /* LightstreamerClient */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LightstreamerClient; path = ../LightstreamerClient; sourceTree = "<group>"; };
 		57971FC226F4D0A200058B04 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		57971FC326F4D0A200058B04 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8C2FC727177835B3009F4C03 /* StockList Demo for macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "StockList Demo for macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C2FC72B177835B3009F4C03 /* Cocoa.framework in Frameworks */,
-				578EFE8826F0AAF3003207E3 /* LightstreamerClient in Frameworks */,
+				57971FC626F4D0EC00058B04 /* LightstreamerClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +59,6 @@
 			children = (
 				57971FC326F4D0A200058B04 /* LICENSE */,
 				57971FC226F4D0A200058B04 /* README.md */,
-				578EFE8626F0AAAE003207E3 /* LightstreamerClient */,
 				8C2FC730177835B3009F4C03 /* StockList Demo for macOS */,
 				8C2FC729177835B3009F4C03 /* Frameworks */,
 				8C2FC728177835B3009F4C03 /* Products */,
@@ -137,7 +135,7 @@
 			);
 			name = "StockList Demo for macOS";
 			packageProductDependencies = (
-				578EFE8726F0AAF3003207E3 /* LightstreamerClient */,
+				57971FC526F4D0EC00058B04 /* LightstreamerClient */,
 			);
 			productName = "StockList Demo for OS X";
 			productReference = 8C2FC727177835B3009F4C03 /* StockList Demo for macOS.app */;
@@ -172,6 +170,7 @@
 			);
 			mainGroup = 8C2FC71E177835B3009F4C03;
 			packageReferences = (
+				57971FC426F4D0EC00058B04 /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */,
 			);
 			productRefGroup = 8C2FC728177835B3009F4C03 /* Products */;
 			projectDirPath = "";
@@ -425,9 +424,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		57971FC426F4D0EC00058B04 /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lightstreamer/Lightstreamer-lib-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "5.0.0-beta.2";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		578EFE8726F0AAF3003207E3 /* LightstreamerClient */ = {
+		57971FC526F4D0EC00058B04 /* LightstreamerClient */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 57971FC426F4D0EC00058B04 /* XCRemoteSwiftPackageReference "Lightstreamer-lib-client-swift" */;
 			productName = LightstreamerClient;
 		};
 /* End XCSwiftPackageProductDependency section */
