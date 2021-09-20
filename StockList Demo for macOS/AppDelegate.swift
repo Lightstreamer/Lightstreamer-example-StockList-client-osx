@@ -1,5 +1,6 @@
+//  Converted to Swift 5.4 by Swiftify v5.4.25812 - https://swiftify.com/
 //
-//  StockListWindowController.h
+//  AppDelegate.swift
 //  StockList Demo for macOS
 //
 // Copyright (c) Lightstreamer Srl
@@ -17,8 +18,27 @@
 // limitations under the License.
 //
 
-#import <Cocoa/Cocoa.h>
+import Cocoa
 
+@NSApplicationMain
+class AppDelegate: NSObject, NSApplicationDelegate {
+    var window: StockListWindowController?
 
-@interface StockListWindowController : NSWindowController <LSClientDelegate, LSSubscriptionDelegate, NSWindowDelegate, NSTableViewDataSource, NSTableViewDelegate>
-@end
+    // MARK: -
+    // MARK: Initialization
+
+    override init() {
+        super.init()
+            // Nothing to do
+    }
+
+    // MARK: -
+    // MARK: NSApplicationDelegate methods
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+
+        // Open window
+        window = StockListWindowController()
+        window?.showWindow(nil)
+    }
+}

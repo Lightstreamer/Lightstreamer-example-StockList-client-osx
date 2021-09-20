@@ -1,45 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="StockListWindowController">
             <connections>
-                <outlet property="_stockListTable" destination="7" id="36"/>
-                <outlet property="_stockListWindow" destination="185" id="199"/>
+                <outlet property="stockListTable" destination="7" id="R4T-5E-PY9"/>
+                <outlet property="stockListWindow" destination="185" id="JFj-dN-CzQ"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <window title="Lightstreamer StockList" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" animationBehavior="default" id="185">
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Lightstreamer StockList" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="default" id="185">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="800" height="588"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="775"/>
             <view key="contentView" id="188">
                 <rect key="frame" x="0.0" y="0.0" width="800" height="588"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="3">
+                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="800" height="588"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" id="DQ1-Wq-n5r">
-                            <rect key="frame" x="1" y="0.0" width="798" height="587"/>
+                            <rect key="frame" x="1" y="1" width="798" height="586"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="5" id="7">
-                                    <rect key="frame" x="0.0" y="0.0" width="798" height="564"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="798" height="563"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
-                                        <tableColumn identifier="0" editable="NO" width="125" minWidth="40" maxWidth="1000" id="18">
+                                        <tableColumn identifier="0" editable="NO" width="124" minWidth="40" maxWidth="1000" id="18">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
@@ -50,9 +49,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="1" editable="NO" width="64" minWidth="40" maxWidth="1000" id="17">
+                                        <tableColumn identifier="1" editable="NO" width="63" minWidth="40" maxWidth="1000" id="17">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Last">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                             </tableHeaderCell>
@@ -63,9 +61,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="2" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="16">
+                                        <tableColumn identifier="2" editable="NO" width="63" minWidth="10" maxWidth="3.4028234663852886e+38" id="16">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Time">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -76,18 +73,16 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="3" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="15">
+                                        <tableColumn identifier="3" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="15">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="+/-">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
                                             <imageCell key="dataCell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Arrow-down" id="41"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="4" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="14">
+                                        <tableColumn identifier="4" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="14">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Change">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -98,9 +93,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="5" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="13">
+                                        <tableColumn identifier="5" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="13">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Bid">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -111,9 +105,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="6" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="12">
+                                        <tableColumn identifier="6" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="12">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Ask">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -124,9 +117,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="7" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="11">
+                                        <tableColumn identifier="7" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="11">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Min">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -137,9 +129,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="8" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="10">
+                                        <tableColumn identifier="8" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="10">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Max">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -150,9 +141,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="9" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="9">
+                                        <tableColumn identifier="9" editable="NO" width="63.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="9">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Ref.">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -163,9 +153,8 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         </tableColumn>
-                                        <tableColumn identifier="10" editable="NO" width="64" minWidth="10" maxWidth="3.4028234663852886e+38" id="8">
+                                        <tableColumn identifier="10" editable="NO" width="61.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="8">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Open">
-                                                <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
@@ -188,11 +177,11 @@
                             <rect key="frame" x="1" y="583" width="798" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="37" horizontal="NO" id="4">
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="4">
                             <rect key="frame" x="224" y="17" width="15" height="102"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <tableHeaderView key="headerView" id="5">
+                        <tableHeaderView key="headerView" wantsLayer="YES" id="5">
                             <rect key="frame" x="0.0" y="0.0" width="798" height="23"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
@@ -202,6 +191,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="197"/>
             </connections>
+            <point key="canvasLocation" x="139" y="103"/>
         </window>
     </objects>
     <resources>
