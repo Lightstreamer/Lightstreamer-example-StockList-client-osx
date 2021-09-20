@@ -2,7 +2,7 @@
 
 <!-- START DESCRIPTION lightstreamer-example-stocklist-client-macos -->
 
-This project contains an example of an application for Mac that employs the [Lightstreamer macOS Client library](http://www.lightstreamer.com/api/ls-macos-client/latest/).
+This project contains an example of an application for Mac that employs the [Lightstreamer Swift Client library](http://www.lightstreamer.com/api/ls-swift-client/latest/).
 
 ## Live Demo
 
@@ -12,9 +12,9 @@ This project contains an example of an application for Mac that employs the [Lig
 
 ### Details
 
-This app, compatible with macOS, is an Objective-C version of the [Stock-List Demos](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript).<br>
+This app, compatible with macOS, is a Swift version of the [Stock-List Demos](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript).<br>
 
-This app uses the <b>macOS Client API for Lightstreamer</b> to handle the communications with Lightstreamer Server. A simple user interface is implemented to display the real-time data received from Lightstreamer Server.<br>
+This app uses the <b>Swift Client API for Lightstreamer</b> to handle the communications with Lightstreamer Server. A simple user interface is implemented to display the real-time data received from Lightstreamer Server.<br>
 
 <!-- END DESCRIPTION lightstreamer-example-stocklist-client-macos -->
 
@@ -34,7 +34,7 @@ To build your own version of the demo, instead of using the one provided in the 
 ### Deploy
 
 With the current settings, the demo tries to connect to the demo server currently running on Lightstreamer website.<br>
-The demo can be reconfigured and recompiled to connect to the local installation of Lightstreamer Server. You just have to change SERVER_URL, as defined in `StockList Demo for macOS/StockListWindowController.m`; a ":port" part can also be added.
+The demo can be reconfigured and recompiled to connect to the local installation of Lightstreamer Server. You just have to change SERVER_URL, as defined in `StockList Demo for macOS/StockListWindowController.swift`; a ":port" part can also be added.
 The example requires that the [QUOTE_ADAPTER](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed in your local Lightstreamer server instance;
 the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-example-ReusableMetadata-adapter-java) is also needed, but it is already provided by Lightstreamer server.<br>
 
@@ -64,7 +64,7 @@ the [LiteralBasedProvider](https://github.com/Lightstreamer/Lightstreamer-exampl
 
 ## Lightstreamer Compatibility Notes
 
-* Code compatible with Lightstreamer macOS Client Library version 4.0.0 or newer.
-* Build instructions compatible with Lightstreamer macOS Client SDK version 4.3.0 or newer.
+* Code compatible with Lightstreamer Swift Client Library version 5.0.0 or newer.
+* Build instructions compatible with Lightstreamer Swift Client SDK version 5.0.0 or newer.
 * For Lightstreamer Server version 7.0 or greater. Ensure that macOS Client SDK is supported by Lightstreamer Server license configuration.
-* For a version of this example compatible with Lightstreamer macOS Client SDK versions up to 4.2.1, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-osx/tree/latest-for-cocoapods).
+* For a version of this example compatible with Lightstreamer macOS Client SDK versions up to 4, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-osx/tree/latest-for-client-4.x).
