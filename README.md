@@ -24,7 +24,7 @@ If you want to install a version of this demo pointing to your local Lightstream
 
 * Note that, as prerequisite, the [Lightstreamer - Stock- List Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
-* Download the `deploy.zip` file, which you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-macos/releases) of this project and extract the `StockList Demo for macOS.app` folder.
+* Download the `deploy.zip` file, which you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-osx/releases) of this project and extract the `StockList Demo for macOS.app` folder.
 * Launch "StockList Demo for macOS". The Gatekeeper may signal the app is not signed. You can safely run the app or rebuild it with the included Xcode project.
 
 ## Build
