@@ -356,7 +356,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.5.0;
 				OTHER_CFLAGS = (
 					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
@@ -390,7 +390,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.5.0;
 				OTHER_CFLAGS = (
 					"-DUSE_LOCALHOST=$(USE_LOCALHOST)",
